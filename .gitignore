@@ -1,0 +1,22 @@
+# Environment variables - credentials
+.env
+
+# MID Server
+mid-server/
+mid-server-linux64.zip
+mid-server-osx64.zip
+mid_download.mjs
+*.png
+agent.jar
+
+# OS
+.DS_Store
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
