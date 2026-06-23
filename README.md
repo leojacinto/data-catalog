@@ -11,14 +11,42 @@ Demonstrates ServiceNow WDF as a **meta-catalog** across three data sources:
 
 ## Prerequisites
 
-- ServiceNow instance with Workflow Data Fabric (WDF) enabled
-- MID Server installed and connected to the instance
-- Snowflake account with `COMPUTE_WH` warehouse
-- Neon PostgreSQL project
-- Python 3.9+ with dependencies:
-  ```
-  pip install snowflake-connector-python psycopg2-binary
-  ```
+### ServiceNow
+
+- Instance on the **Australia release** or later with the **Workflow Data Fabric** plugin activated (`sn_dcg_core`, `sn_dcg_cc`)
+- The following roles assigned to your user:
+  - `admin` - required to configure connections and run collectors
+  - `df_data_steward` - required to create and manage Data Interfaces in Data Workbench
+  - `data_product_admin` - required to create, update, and publish Data Products
+  - `data_product_user` - required for consumers querying published Data Products
+- A **MID Server** installed, running, and validated on the instance (see MID Server section below)
+- The Neon metadata collector connector (`catalog-postgresql`) available under Connect Hub
+- Optional: SNOWSK8S compute provisioned on the instance for the Snowflake KOS collector. If not provisioned (common on PDIs), use `sn_snowflake_catalog_ingest.py` instead.
+
+> **Note:** Build and test in a development or sub-production instance first. Use an update set to promote to production.
+
+### Snowflake
+
+- A Snowflake account with admin or `SYSADMIN` privileges
+- A running virtual warehouse (default: `COMPUTE_WH`)
+- Privileges to create databases, schemas, tags, and Data Metric Functions
+- Snowflake Horizon enabled (available on Enterprise edition and above) for tags and DMFs
+- Account locator noted (format: `<orgname>-<accountname>`, e.g. `abc123-xy12345`)
+
+### Neon PostgreSQL
+
+- A [Neon](https://neon.tech) project created (free tier is sufficient)
+- Connection string with `sslmode=require`
+- The default `neondb_owner` user has full privileges on the `neondb` database
+- **Important:** Create a second database named `neondb_owner` on the project. The ServiceNow PostgreSQL collector calls `getAllDatabases()` on connect and defaults to a database matching the username - this prevents a connection error.
+
+### Python
+
+```
+pip install snowflake-connector-python psycopg2-binary
+```
+
+Requires Python 3.9+.
 
 ---
 
