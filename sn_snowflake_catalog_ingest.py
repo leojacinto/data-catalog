@@ -62,9 +62,8 @@ table_tags = {}
 for tbl in ['TRADE', 'POSITION', 'BUDGET_PLAN', 'COUNTERPARTY']:
     sfc.execute(f"""
         SELECT TAG_NAME, TAG_VALUE
-        FROM TABLE(INFORMATION_SCHEMA.TAG_REFERENCES_ALL_COLUMNS(
+        FROM TABLE(INFORMATION_SCHEMA.TAG_REFERENCES(
             'APRA_RISK_DW.RISK.{tbl}', 'table'))
-        WHERE COLUMN_NAME IS NULL
         ORDER BY TAG_NAME
     """)
     tags = {row[0]: row[1] for row in sfc.fetchall()}
