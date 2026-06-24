@@ -139,7 +139,7 @@ The `mid-server/` directory is gitignored. To set up:
 
 ## Snowflake Collector Note
 
-The KOS `SnowflakeCollector` runs on `SNOWSK8S` (ServiceNow hosted compute), not via MID. If SNOWSK8S is not provisioned on your instance (common on PDIs), run `sn_snowflake_catalog_ingest.py` to manually inject Snowflake assets into the catalog with full descriptions and domain assignments.
+The KOS Snowflake Collector requires ServiceNow hosted compute. If you encounter connectivity errors when running the collector, run `sn_snowflake_catalog_ingest.py` instead - it pulls metadata directly from Snowflake `INFORMATION_SCHEMA` (object comments, table tags, column-level tags, DMFs) and injects it into the ServiceNow catalog.
 
 ---
 
@@ -151,7 +151,7 @@ See `HOW-TO-DEMO.md` for the full 15-minute demo walkthrough.
 
 ## Known Issues / Fix Required
 
-- **Snowflake catalog-level ingestion incomplete** - `sn_snowflake_catalog_ingest.py` copies table and column metadata from Snowflake `INFORMATION_SCHEMA` into ServiceNow, but does not represent the Snowflake Horizon catalog itself as a first-class asset in ServiceNow. The "catalog of catalogs" story requires the KOS Snowflake collector to run natively so that the connection record, collector run, and lineage back to source are created by ServiceNow - not a flat copy. Root cause: `dcg-collector-controller` SNOWSK8S service endpoint is not provisioned on PDI instances. **This must be resolved before the Glue integration is added**, as Glue lineage depends on the Snowflake catalog abstraction being present in ServiceNow first.
+- **Snowflake catalog-level ingestion incomplete** - `sn_snowflake_catalog_ingest.py` copies table and column metadata from Snowflake into ServiceNow but does not represent the Snowflake catalog itself as a first-class asset in ServiceNow. The "catalog of catalogs" story requires the native KOS Snowflake collector to run successfully so that connection records, collector runs, and lineage back to source are created by ServiceNow - not a flat copy. **This must be resolved before the Glue integration is added**, as Glue lineage depends on the Snowflake catalog abstraction being present in ServiceNow first.
 
 ---
 
