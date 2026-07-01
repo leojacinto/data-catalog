@@ -13,7 +13,9 @@ Demonstrates ServiceNow WDF as a **meta-catalog** across three data sources:
 
 ### ServiceNow
 
-- Instance on the **Australia release** or later with the **Workflow Data Fabric** plugin activated (`sn_dcg_core`, `sn_dcg_cc`)
+- Instance on the **Australia release** or later with the **Data Catalog** application installed from the ServiceNow Store (plugins: `sn_dcg_ui`, `sn_dcg_core`, `sn_meta_collectors`, `sn_dcg_cc`, `sn_wdf_connect_hub`)
+- The **Data products** application (`sn_data_product`) installed from the ServiceNow Store, for the Data Interface / Data Product steps
+- **Zero Copy Connectors** entitlement (part of **WDF Advanced**, a paid upgrade over the WDF Foundation that Data Catalog ships in) - required for the live Neon ZCC tables in the demo
 - The following roles assigned to your user:
   - `admin` - required to configure connections and run collectors
   - `df_connection_admin` - required to create and manage zero copy connections in Connect Hub
@@ -22,7 +24,7 @@ Demonstrates ServiceNow WDF as a **meta-catalog** across three data sources:
   - `data_product_user` - required for consumers querying published Data Products
 - A **MID Server** installed, running, and validated on the instance (see MID Server section below)
 - The Neon metadata collector connector (`catalog-postgresql`) available under Connect Hub
-- Optional: SNOWSK8S compute provisioned on the instance for the Snowflake KOS collector. If not provisioned (common on PDIs), use `sn_snowflake_catalog_ingest.py` instead.
+- Optional: a working connection for the Snowflake KOS metadata collector. If the collector can't reach Snowflake (common on PDIs), use `sn_snowflake_catalog_ingest.py` instead.
 
 > **Note:** Build and test in a development or sub-production instance first. Use an update set to promote to production.
 
@@ -68,7 +70,7 @@ Requires Python 3.9+.
 | 4 | `snowflake_catalog.py` | Adds Snowflake Horizon tags, column-level sensitivity, DMFs, object comments |
 | 5 | UI - ZCC setup | Configure Neon zero-copy connection and map data fabric tables in Connect Hub (see below) |
 | 6 | `sn_govern.py` | Creates SN domains, glossary terms, enriches Neon asset descriptions |
-| 7 | `sn_snowflake_catalog_ingest.py` | Injects Snowflake assets into SN Data Catalog (use if SNOWSK8S compute is not provisioned) |
+| 7 | `sn_snowflake_catalog_ingest.py` | Injects Snowflake assets into SN Data Catalog (use if the KOS Snowflake collector can't connect) |
 
 ---
 
@@ -139,7 +141,7 @@ The `mid-server/` directory is gitignored. To set up:
 
 ## Snowflake Collector Note
 
-The KOS Snowflake Collector requires ServiceNow hosted compute. If you encounter connectivity errors when running the collector, run `sn_snowflake_catalog_ingest.py` instead - it pulls metadata directly from Snowflake `INFORMATION_SCHEMA` (object comments, table tags, column-level tags, DMFs) and injects it into the ServiceNow catalog.
+If you encounter connectivity errors when running the KOS Snowflake collector, run `sn_snowflake_catalog_ingest.py` instead - it pulls metadata directly from Snowflake `INFORMATION_SCHEMA` (object comments, table tags, column-level tags, DMFs) and injects it into the ServiceNow catalog.
 
 ---
 

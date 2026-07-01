@@ -3,12 +3,12 @@ Ingests Snowflake catalog metadata into ServiceNow Data Catalog.
 
 Reads live from Snowflake's own catalog layer built by snowflake_catalog.py:
   - Object comments (INFORMATION_SCHEMA) -> SN asset descriptions
-  - Table-level tags (TAG_REFERENCES_ALL_COLUMNS) -> SN short_description / additional_info
-  - Column-level tags -> SN column records with tag annotations
+  - Table-level tags (TAG_REFERENCES) -> SN short_description / additional_info
+  - Column-level tags (TAG_REFERENCES_ALL_COLUMNS) -> SN column records with tag annotations
   - DMF definitions (INFORMATION_SCHEMA.FUNCTIONS) -> noted in asset descriptions
 
-Used because KOS SnowflakeCollector requires SNOWSK8S compute, which is not
-provisioned on PDI instances. This script simulates what the collector would do.
+Used when the KOS Snowflake collector can't connect to Snowflake (common on PDI
+instances). This script simulates what the collector would do.
 """
 import urllib.request, json, base64, os, warnings
 import snowflake.connector

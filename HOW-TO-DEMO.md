@@ -88,9 +88,9 @@ Show: BCBS 239, Value at Risk, P&L Reconciliation, LEI Code, Net Exposure
 
 **Talking point:** *"The glossary bridges the gap between what a regulator calls it (BCBS 239, LEI) and what the data engineer named it (lei_code, var_1day). Link a glossary term to an asset and every consumer immediately understands the regulatory context."*
 
-#### 3d. Trust Score
-Back in the catalog, point out the Trust Score on any asset.  
-**Talking point:** *"Trust Score surfaces governance completeness: does this asset have a description? An owner? A domain? A glossary term? The CDO can see at a glance which assets are governance-ready for the regulator."*
+#### 3d. Data Quality
+Back in the catalog, open an asset and point out its **data quality status** and any **quality badges** - total rules, passed rules, and last run time.  
+**Talking point:** *"Data Catalog surfaces data quality right on the asset: how many quality rules ran, how many passed, and the badge awarded. External data quality tools submit results through the Data Quality API, so the CDO can see at a glance which assets are regulator-ready."*
 
 ---
 
@@ -162,7 +162,7 @@ Show (or create) a Data Product named **"APRA Financial Risk Intelligence"**:
 
 ## What Still Needs the UI (one-time setup)
 
-1. **Snowflake collector** - The KOS SnowflakeCollector requires SNOWSK8S (ServiceNow hosted compute) which is not provisioned on this PDI. Snowflake assets (TRADE, POSITION, BUDGET_PLAN, COUNTERPARTY, VW_PORTFOLIO_EXPOSURE, VW_TRADE_PNL_RECONCILIATION) have been manually ingested into the catalog with full descriptions, tags, and domain assignments. In a production instance with SNOWSK8S provisioned, the collector would run automatically and also capture column-level lineage within Snowflake views.
+1. **Snowflake collector** - The KOS Snowflake collector could not connect to Snowflake on this PDI. Snowflake assets (TRADE, POSITION, BUDGET_PLAN, COUNTERPARTY, VW_PORTFOLIO_EXPOSURE, VW_TRADE_PNL_RECONCILIATION) have been manually ingested into the catalog with full descriptions, tags, and domain assignments. In an instance where the collector connects successfully, it would run automatically and also capture column-level lineage within Snowflake views.
 2. **Create Data Interfaces + Data Product** - Go to Data Workbench, Create, follow wizard  
    *(Requires UI; no public REST API for Data Interface creation)*
 3. **Link Glossary Terms to Assets** - In each asset detail page, add glossary term  
