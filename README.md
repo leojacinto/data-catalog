@@ -1,11 +1,11 @@
-# ServiceNow Workflow Data Fabric - Banking Demo
+# ServiceNow Workflow Data Fabric
 
 Demonstrates ServiceNow WDF as a **meta-catalog** across three data sources:
 - **Snowflake** - front-office risk data warehouse (trades, positions, P&L)
 - **Neon PostgreSQL** - middle-office reconciliation database (budget vs actual, variance)
 - **ServiceNow ZCC** - live operational data (forecast, variance tasks, expense events)
 
-**Regulatory story:** Australian bank demonstrating APRA CPG 235 / BCBS 239 compliance: data lineage, classification, ownership, and quality checks across all sources, discoverable in one governed catalog.
+**Regulatory story:** bank demonstrating APRA CPG 235 / BCBS 239 compliance: data lineage, classification, ownership, and quality checks across all sources, discoverable in one governed catalog.
 
 ---
 
