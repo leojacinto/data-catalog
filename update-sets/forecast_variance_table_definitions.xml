@@ -1,0 +1,4552 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<unload unload_date="2026-07-02 00:21:30">
+  <sys_update_set>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <description>Table and column definitions for the Forecast Variance scoped app (x_snc_forecast_v_0). Install on a fresh instance before running the ZCC/data fabric setup steps in the demo.</description>
+    <name>Forecast Variance - Table Definitions</name>
+    <origin_sys_id>0a3411023b754fd0e0abdda693e45a0a</origin_sys_id>
+    <state>complete</state>
+    <sys_id>0a3411023b754fd0e0abdda693e45a0a</sys_id>
+  </sys_update_set>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_db_object_52f006913b46be5062f31831a3e45ab9</name>
+    <payload>&lt;sys_db_object&gt;
+&lt;access&gt;public&lt;/access&gt;
+&lt;actions_access&gt;false&lt;/actions_access&gt;
+&lt;alter_access&gt;false&lt;/alter_access&gt;
+&lt;caller_access /&gt;
+&lt;client_scripts_access&gt;false&lt;/client_scripts_access&gt;
+&lt;columnar_table&gt;false&lt;/columnar_table&gt;
+&lt;configuration_access&gt;false&lt;/configuration_access&gt;
+&lt;create_access&gt;false&lt;/create_access&gt;
+&lt;create_access_controls&gt;true&lt;/create_access_controls&gt;
+&lt;delete_access&gt;false&lt;/delete_access&gt;
+&lt;extension_model /&gt;
+&lt;filter_extension /&gt;
+&lt;is_data_interface&gt;false&lt;/is_data_interface&gt;
+&lt;is_df_table&gt;false&lt;/is_df_table&gt;
+&lt;is_document_table&gt;false&lt;/is_document_table&gt;
+&lt;is_extendable&gt;false&lt;/is_extendable&gt;
+&lt;label&gt;Cost Center Budget History&lt;/label&gt;
+&lt;live_feed_enabled&gt;false&lt;/live_feed_enabled&gt;
+&lt;name&gt;x_snc_forecast_v_0_cost_center_budget_history&lt;/name&gt;
+&lt;number_ref /&gt;
+&lt;read_access&gt;true&lt;/read_access&gt;
+&lt;scriptable_table&gt;false&lt;/scriptable_table&gt;
+&lt;super_class /&gt;
+&lt;sys_class_code /&gt;
+&lt;sys_class_name&gt;sys_db_object&lt;/sys_class_name&gt;
+&lt;sys_class_path /&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-12-25 09:43:31&lt;/sys_created_on&gt;
+&lt;sys_id&gt;52f006913b46be5062f31831a3e45ab9&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Cost Center Budget History&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_db_object_52f006913b46be5062f31831a3e45ab9&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-12-25 09:43:31&lt;/sys_updated_on&gt;
+&lt;update_access&gt;false&lt;/update_access&gt;
+&lt;user_role&gt;1721c6d13b46be5062f31831a3e45a29&lt;/user_role&gt;
+&lt;ws_access&gt;true&lt;/ws_access&gt;
+&lt;/sys_db_object&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>52f006913b46be5062f31831a3e45ab9</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_db_object</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_db_object_b6733b773bc2ba500ad1a021a3e45a75</name>
+    <payload>&lt;sys_db_object&gt;
+&lt;access /&gt;
+&lt;actions_access&gt;true&lt;/actions_access&gt;
+&lt;alter_access&gt;true&lt;/alter_access&gt;
+&lt;caller_access /&gt;
+&lt;client_scripts_access&gt;true&lt;/client_scripts_access&gt;
+&lt;columnar_table&gt;false&lt;/columnar_table&gt;
+&lt;configuration_access&gt;false&lt;/configuration_access&gt;
+&lt;create_access&gt;true&lt;/create_access&gt;
+&lt;create_access_controls&gt;false&lt;/create_access_controls&gt;
+&lt;delete_access&gt;false&lt;/delete_access&gt;
+&lt;extension_model /&gt;
+&lt;filter_extension /&gt;
+&lt;is_data_interface&gt;false&lt;/is_data_interface&gt;
+&lt;is_df_table&gt;true&lt;/is_df_table&gt;
+&lt;is_document_table&gt;false&lt;/is_document_table&gt;
+&lt;is_extendable&gt;false&lt;/is_extendable&gt;
+&lt;label&gt;Cost Center Budget Summary&lt;/label&gt;
+&lt;live_feed_enabled&gt;false&lt;/live_feed_enabled&gt;
+&lt;name&gt;x_snc_forecast_v_0_df_cc_summary&lt;/name&gt;
+&lt;number_ref /&gt;
+&lt;read_access&gt;true&lt;/read_access&gt;
+&lt;scriptable_table&gt;false&lt;/scriptable_table&gt;
+&lt;super_class /&gt;
+&lt;sys_class_code /&gt;
+&lt;sys_class_name&gt;sys_db_object&lt;/sys_class_name&gt;
+&lt;sys_class_path /&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2026-01-02 12:27:43&lt;/sys_created_on&gt;
+&lt;sys_id&gt;b6733b773bc2ba500ad1a021a3e45a75&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Forecast V 0 Df Cc Summary&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_db_object_b6733b773bc2ba500ad1a021a3e45a75&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2026-01-02 12:27:43&lt;/sys_updated_on&gt;
+&lt;update_access&gt;true&lt;/update_access&gt;
+&lt;user_role /&gt;
+&lt;ws_access&gt;true&lt;/ws_access&gt;
+&lt;/sys_db_object&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>b6733b773bc2ba500ad1a021a3e45a75</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_db_object</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_db_object_17c21c0f3b918794e0abdda693e45a1c</name>
+    <payload>&lt;sys_db_object&gt;
+&lt;access /&gt;
+&lt;actions_access&gt;true&lt;/actions_access&gt;
+&lt;alter_access&gt;true&lt;/alter_access&gt;
+&lt;caller_access /&gt;
+&lt;client_scripts_access&gt;true&lt;/client_scripts_access&gt;
+&lt;columnar_table&gt;false&lt;/columnar_table&gt;
+&lt;configuration_access&gt;false&lt;/configuration_access&gt;
+&lt;create_access&gt;true&lt;/create_access&gt;
+&lt;create_access_controls&gt;false&lt;/create_access_controls&gt;
+&lt;delete_access&gt;false&lt;/delete_access&gt;
+&lt;extension_model /&gt;
+&lt;filter_extension /&gt;
+&lt;is_data_interface&gt;false&lt;/is_data_interface&gt;
+&lt;is_df_table&gt;true&lt;/is_df_table&gt;
+&lt;is_document_table&gt;false&lt;/is_document_table&gt;
+&lt;is_extendable&gt;false&lt;/is_extendable&gt;
+&lt;label&gt;mv_detail&lt;/label&gt;
+&lt;live_feed_enabled&gt;false&lt;/live_feed_enabled&gt;
+&lt;name&gt;x_snc_forecast_v_0_df_mv_detail&lt;/name&gt;
+&lt;number_ref /&gt;
+&lt;read_access&gt;true&lt;/read_access&gt;
+&lt;scriptable_table&gt;false&lt;/scriptable_table&gt;
+&lt;super_class /&gt;
+&lt;sys_class_code /&gt;
+&lt;sys_class_name&gt;sys_db_object&lt;/sys_class_name&gt;
+&lt;sys_class_path /&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2026-06-10 01:34:41&lt;/sys_created_on&gt;
+&lt;sys_id&gt;17c21c0f3b918794e0abdda693e45a1c&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Forecast V 0 Df Mv Detail&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_db_object_17c21c0f3b918794e0abdda693e45a1c&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2026-06-10 01:34:41&lt;/sys_updated_on&gt;
+&lt;update_access&gt;true&lt;/update_access&gt;
+&lt;user_role /&gt;
+&lt;ws_access&gt;true&lt;/ws_access&gt;
+&lt;/sys_db_object&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>17c21c0f3b918794e0abdda693e45a1c</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_db_object</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_db_object_04a6d8033b558794e0abdda693e45a92</name>
+    <payload>&lt;sys_db_object&gt;
+&lt;access /&gt;
+&lt;actions_access&gt;true&lt;/actions_access&gt;
+&lt;alter_access&gt;true&lt;/alter_access&gt;
+&lt;caller_access /&gt;
+&lt;client_scripts_access&gt;true&lt;/client_scripts_access&gt;
+&lt;columnar_table&gt;false&lt;/columnar_table&gt;
+&lt;configuration_access&gt;false&lt;/configuration_access&gt;
+&lt;create_access&gt;true&lt;/create_access&gt;
+&lt;create_access_controls&gt;false&lt;/create_access_controls&gt;
+&lt;delete_access&gt;false&lt;/delete_access&gt;
+&lt;extension_model /&gt;
+&lt;filter_extension /&gt;
+&lt;is_data_interface&gt;false&lt;/is_data_interface&gt;
+&lt;is_df_table&gt;true&lt;/is_df_table&gt;
+&lt;is_document_table&gt;false&lt;/is_document_table&gt;
+&lt;is_extendable&gt;false&lt;/is_extendable&gt;
+&lt;label&gt;sv&lt;/label&gt;
+&lt;live_feed_enabled&gt;false&lt;/live_feed_enabled&gt;
+&lt;name&gt;x_snc_forecast_v_0_df_sv&lt;/name&gt;
+&lt;number_ref /&gt;
+&lt;read_access&gt;true&lt;/read_access&gt;
+&lt;scriptable_table&gt;false&lt;/scriptable_table&gt;
+&lt;super_class /&gt;
+&lt;sys_class_code /&gt;
+&lt;sys_class_name&gt;sys_db_object&lt;/sys_class_name&gt;
+&lt;sys_class_path /&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2026-06-10 01:51:24&lt;/sys_created_on&gt;
+&lt;sys_id&gt;04a6d8033b558794e0abdda693e45a92&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Forecast V 0 Df Sv&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_db_object_04a6d8033b558794e0abdda693e45a92&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2026-06-10 01:51:24&lt;/sys_updated_on&gt;
+&lt;update_access&gt;true&lt;/update_access&gt;
+&lt;user_role /&gt;
+&lt;ws_access&gt;true&lt;/ws_access&gt;
+&lt;/sys_db_object&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>04a6d8033b558794e0abdda693e45a92</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_db_object</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_db_object_9c68bd833b91fa900ad1a021a3e45ab4</name>
+    <payload>&lt;sys_db_object&gt;
+&lt;access&gt;public&lt;/access&gt;
+&lt;actions_access&gt;true&lt;/actions_access&gt;
+&lt;alter_access&gt;true&lt;/alter_access&gt;
+&lt;caller_access /&gt;
+&lt;client_scripts_access&gt;true&lt;/client_scripts_access&gt;
+&lt;columnar_table&gt;false&lt;/columnar_table&gt;
+&lt;configuration_access&gt;false&lt;/configuration_access&gt;
+&lt;create_access&gt;true&lt;/create_access&gt;
+&lt;create_access_controls&gt;false&lt;/create_access_controls&gt;
+&lt;delete_access&gt;false&lt;/delete_access&gt;
+&lt;extension_model /&gt;
+&lt;filter_extension /&gt;
+&lt;is_data_interface&gt;false&lt;/is_data_interface&gt;
+&lt;is_df_table&gt;false&lt;/is_df_table&gt;
+&lt;is_document_table&gt;false&lt;/is_document_table&gt;
+&lt;is_extendable&gt;false&lt;/is_extendable&gt;
+&lt;label&gt;Expense Transaction Event&lt;/label&gt;
+&lt;live_feed_enabled&gt;false&lt;/live_feed_enabled&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transaction_event&lt;/name&gt;
+&lt;number_ref /&gt;
+&lt;read_access&gt;true&lt;/read_access&gt;
+&lt;scriptable_table&gt;false&lt;/scriptable_table&gt;
+&lt;super_class /&gt;
+&lt;sys_class_code /&gt;
+&lt;sys_class_name&gt;sys_db_object&lt;/sys_class_name&gt;
+&lt;sys_class_path /&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 12:47:21&lt;/sys_created_on&gt;
+&lt;sys_id&gt;9c68bd833b91fa900ad1a021a3e45ab4&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Expense Transaction Event&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_db_object_9c68bd833b91fa900ad1a021a3e45ab4&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2026-01-04 03:40:39&lt;/sys_updated_on&gt;
+&lt;update_access&gt;true&lt;/update_access&gt;
+&lt;user_role /&gt;
+&lt;ws_access&gt;true&lt;/ws_access&gt;
+&lt;/sys_db_object&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>9c68bd833b91fa900ad1a021a3e45ab4</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_db_object</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_db_object_205b3dcf3b91fa900ad1a021a3e45a43</name>
+    <payload>&lt;sys_db_object&gt;
+&lt;access /&gt;
+&lt;actions_access&gt;true&lt;/actions_access&gt;
+&lt;alter_access&gt;true&lt;/alter_access&gt;
+&lt;caller_access /&gt;
+&lt;client_scripts_access&gt;true&lt;/client_scripts_access&gt;
+&lt;columnar_table&gt;false&lt;/columnar_table&gt;
+&lt;configuration_access&gt;false&lt;/configuration_access&gt;
+&lt;create_access&gt;true&lt;/create_access&gt;
+&lt;create_access_controls&gt;false&lt;/create_access_controls&gt;
+&lt;delete_access&gt;false&lt;/delete_access&gt;
+&lt;extension_model /&gt;
+&lt;filter_extension /&gt;
+&lt;is_data_interface&gt;false&lt;/is_data_interface&gt;
+&lt;is_df_table&gt;false&lt;/is_df_table&gt;
+&lt;is_document_table&gt;false&lt;/is_document_table&gt;
+&lt;is_extendable&gt;false&lt;/is_extendable&gt;
+&lt;label&gt;Variance Task&lt;/label&gt;
+&lt;live_feed_enabled&gt;false&lt;/live_feed_enabled&gt;
+&lt;name&gt;x_snc_forecast_v_0_variance_task&lt;/name&gt;
+&lt;number_ref /&gt;
+&lt;read_access&gt;true&lt;/read_access&gt;
+&lt;scriptable_table&gt;false&lt;/scriptable_table&gt;
+&lt;super_class&gt;14af8c723b633210e0abdda693e45a0b&lt;/super_class&gt;
+&lt;sys_class_code /&gt;
+&lt;sys_class_name&gt;sys_db_object&lt;/sys_class_name&gt;
+&lt;sys_class_path /&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 13:00:12&lt;/sys_created_on&gt;
+&lt;sys_id&gt;205b3dcf3b91fa900ad1a021a3e45a43&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Forecast V 0 Variance Task&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_db_object_205b3dcf3b91fa900ad1a021a3e45a43&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-11-23 13:00:12&lt;/sys_updated_on&gt;
+&lt;update_access&gt;true&lt;/update_access&gt;
+&lt;user_role /&gt;
+&lt;ws_access&gt;true&lt;/ws_access&gt;
+&lt;/sys_db_object&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>205b3dcf3b91fa900ad1a021a3e45a43</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_db_object</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_19a186553b46be5062f31831a3e45a52</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes /&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation&gt;(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);&lt;/calculation&gt;
+&lt;choice /&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Cost Center Description&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;cost_center_description&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_cost_center_budget_history&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-12-25 09:49:09&lt;/sys_created_on&gt;
+&lt;sys_id&gt;19a186553b46be5062f31831a3e45a52&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Cost Center Description&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_cost_center_budget_history_cost_center_description&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-12-25 09:49:09&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>19a186553b46be5062f31831a3e45a52</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_19c18e953b46be5062f31831a3e45a9a</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation&gt;(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);&lt;/calculation&gt;
+&lt;choice /&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Fiscal Year&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;fiscal_year&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;integer&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_cost_center_budget_history&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-12-25 09:49:09&lt;/sys_created_on&gt;
+&lt;sys_id&gt;19c18e953b46be5062f31831a3e45a9a&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Fiscal Year&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_cost_center_budget_history_fiscal_year&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-12-25 09:49:09&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>19c18e953b46be5062f31831a3e45a9a</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_1d32c2593b46be5062f31831a3e45a34</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation&gt;(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);&lt;/calculation&gt;
+&lt;choice /&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Variance Percent&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;variance_pct&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;decimal&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;20&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_cost_center_budget_history&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-12-25 09:49:11&lt;/sys_created_on&gt;
+&lt;sys_id&gt;1d32c2593b46be5062f31831a3e45a34&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Variance Percent&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_cost_center_budget_history_variance_pct&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-12-25 09:49:11&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>1d32c2593b46be5062f31831a3e45a34</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_24424e593b46be5062f31831a3e45aa1</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes /&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation&gt;(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);&lt;/calculation&gt;
+&lt;choice /&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Status&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;status&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_cost_center_budget_history&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-12-25 09:49:11&lt;/sys_created_on&gt;
+&lt;sys_id&gt;24424e593b46be5062f31831a3e45aa1&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Status&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_cost_center_budget_history_status&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-12-25 09:49:11&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>24424e593b46be5062f31831a3e45aa1</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_2be1ced53b46be5062f31831a3e45a45</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true,omit_sys_original=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation&gt;(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);&lt;/calculation&gt;
+&lt;choice /&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Monthly Budget&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;monthly_budget&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;currency&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;20&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_cost_center_budget_history&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-12-25 09:49:10&lt;/sys_created_on&gt;
+&lt;sys_id&gt;2be1ced53b46be5062f31831a3e45a45&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Monthly Budget&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_cost_center_budget_history_monthly_budget&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-12-25 09:49:10&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>2be1ced53b46be5062f31831a3e45a45</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_3602ced53b46be5062f31831a3e45a4c</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true,omit_sys_original=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation&gt;(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);&lt;/calculation&gt;
+&lt;choice /&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Actual Spend&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;actual_spend&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;currency&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;20&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_cost_center_budget_history&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-12-25 09:49:10&lt;/sys_created_on&gt;
+&lt;sys_id&gt;3602ced53b46be5062f31831a3e45a4c&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Actual Spend&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_cost_center_budget_history_actual_spend&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-12-25 09:49:10&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>3602ced53b46be5062f31831a3e45a4c</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_88314ad13b46be5062f31831a3e45af3</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes /&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation&gt;(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);&lt;/calculation&gt;
+&lt;choice /&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label /&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element /&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;collection&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_cost_center_budget_history&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass&gt;288&lt;/sizeclass&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-12-25 09:43:33&lt;/sys_created_on&gt;
+&lt;sys_id&gt;88314ad13b46be5062f31831a3e45af3&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;x_snc_forecast_v_0_cost_center_budget_history&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_cost_center_budget_history_NULL&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-12-25 09:43:33&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>88314ad13b46be5062f31831a3e45af3</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_da318a513b46be5062f31831a3e45a0d</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes /&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation&gt;(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);&lt;/calculation&gt;
+&lt;choice /&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Cost Center&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;cost_center&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_cost_center_budget_history&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-12-25 09:49:08&lt;/sys_created_on&gt;
+&lt;sys_id&gt;da318a513b46be5062f31831a3e45a0d&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Cost Center&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_cost_center_budget_history_cost_center&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-12-25 09:49:08&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>da318a513b46be5062f31831a3e45a0d</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_ded18e953b46be5062f31831a3e45aa2</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation&gt;(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);&lt;/calculation&gt;
+&lt;choice /&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Fiscal Month&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;fiscal_month&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;integer&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_cost_center_budget_history&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-12-25 09:49:09&lt;/sys_created_on&gt;
+&lt;sys_id&gt;ded18e953b46be5062f31831a3e45aa2&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Fiscal Month&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_cost_center_budget_history_fiscal_month&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-12-25 09:49:09&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>ded18e953b46be5062f31831a3e45aa2</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_e5b186553b46be5062f31831a3e45a58</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true,encode_utf8=false&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation&gt;(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);&lt;/calculation&gt;
+&lt;choice /&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Owner&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;owner&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;reference&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_cost_center_budget_history&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference&gt;sys_user&lt;/reference&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition table="sys_user" /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-12-25 09:49:09&lt;/sys_created_on&gt;
+&lt;sys_id&gt;e5b186553b46be5062f31831a3e45a58&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Owner&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_cost_center_budget_history_owner&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-12-25 10:06:48&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>e5b186553b46be5062f31831a3e45a58</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_fc22c2593b46be5062f31831a3e45a2e</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true,omit_sys_original=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation&gt;(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);&lt;/calculation&gt;
+&lt;choice /&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Variance&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;variance&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;currency&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;20&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_cost_center_budget_history&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-12-25 09:49:11&lt;/sys_created_on&gt;
+&lt;sys_id&gt;fc22c2593b46be5062f31831a3e45a2e&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Variance&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_cost_center_budget_history_variance&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-12-25 09:49:11&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>fc22c2593b46be5062f31831a3e45a2e</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_07eb31913bc2be5062f31831a3e45a18</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes /&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation&gt;(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);&lt;/calculation&gt;
+&lt;choice /&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Expense Date&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;expense_date&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;glide_date&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transactions&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-12-25 09:23:26&lt;/sys_created_on&gt;
+&lt;sys_id&gt;07eb31913bc2be5062f31831a3e45a18&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Expense Date&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transactions_expense_date&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-12-25 09:23:26&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>07eb31913bc2be5062f31831a3e45a18</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_435c35553bc2be5062f31831a3e45aaf</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes /&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation&gt;(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);&lt;/calculation&gt;
+&lt;choice /&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;GL Account&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;gl_account&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transactions&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-12-25 09:23:28&lt;/sys_created_on&gt;
+&lt;sys_id&gt;435c35553bc2be5062f31831a3e45aaf&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;GL Account&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transactions_gl_account&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-12-25 09:23:28&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>435c35553bc2be5062f31831a3e45aaf</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_46db31913bc2be5062f31831a3e45a0f</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes /&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation&gt;(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);&lt;/calculation&gt;
+&lt;choice /&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Cost Center&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;cost_center&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transactions&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-12-25 09:23:25&lt;/sys_created_on&gt;
+&lt;sys_id&gt;46db31913bc2be5062f31831a3e45a0f&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Cost Center&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transactions_cost_center&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-12-25 09:23:25&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>46db31913bc2be5062f31831a3e45a0f</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_4e8bf9dd3b82be5062f31831a3e45a00</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes /&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation&gt;(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);&lt;/calculation&gt;
+&lt;choice /&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label /&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element /&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;collection&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transactions&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass&gt;200&lt;/sizeclass&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-12-25 09:18:51&lt;/sys_created_on&gt;
+&lt;sys_id&gt;4e8bf9dd3b82be5062f31831a3e45a00&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;x_snc_forecast_v_0_expense_transactions&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transactions_NULL&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-12-25 09:18:51&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>4e8bf9dd3b82be5062f31831a3e45a00</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_5c0cf9913bc2be5062f31831a3e45a58</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes /&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation&gt;(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);&lt;/calculation&gt;
+&lt;choice /&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Expense Category&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;expense_category&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transactions&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-12-25 09:23:26&lt;/sys_created_on&gt;
+&lt;sys_id&gt;5c0cf9913bc2be5062f31831a3e45a58&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Expense Category&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transactions_expense_category&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-12-25 09:23:26&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>5c0cf9913bc2be5062f31831a3e45a58</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_5c2c39d13bc2be5062f31831a3e45ab3</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes /&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation&gt;(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);&lt;/calculation&gt;
+&lt;choice /&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Description&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;description&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transactions&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-12-25 09:23:26&lt;/sys_created_on&gt;
+&lt;sys_id&gt;5c2c39d13bc2be5062f31831a3e45ab3&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Description&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transactions_description&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-12-25 09:23:26&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>5c2c39d13bc2be5062f31831a3e45ab3</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_683c39d13bc2be5062f31831a3e45ab7</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes /&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation&gt;(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);&lt;/calculation&gt;
+&lt;choice /&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Amount&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;amount&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;currency&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;20&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transactions&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-12-25 09:23:27&lt;/sys_created_on&gt;
+&lt;sys_id&gt;683c39d13bc2be5062f31831a3e45ab7&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Amount&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transactions_amount&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-12-25 09:23:27&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>683c39d13bc2be5062f31831a3e45ab7</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_6dcb39513bc2be5062f31831a3e45aae</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes /&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation&gt;(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);&lt;/calculation&gt;
+&lt;choice /&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Expense ID&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;expense_id&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transactions&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-12-25 09:23:24&lt;/sys_created_on&gt;
+&lt;sys_id&gt;6dcb39513bc2be5062f31831a3e45aae&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Expense ID&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transactions_expense_id&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-12-25 09:23:24&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>6dcb39513bc2be5062f31831a3e45aae</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_a01cf9913bc2be5062f31831a3e45a5e</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes /&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation&gt;(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);&lt;/calculation&gt;
+&lt;choice /&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Vendor&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;vendor&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transactions&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-12-25 09:23:26&lt;/sys_created_on&gt;
+&lt;sys_id&gt;a01cf9913bc2be5062f31831a3e45a5e&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Vendor&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transactions_vendor&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-12-25 09:23:26&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>a01cf9913bc2be5062f31831a3e45a5e</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_fd4c39d13bc2be5062f31831a3e45abb</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes /&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation&gt;(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);&lt;/calculation&gt;
+&lt;choice /&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Approved by&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;approved_by&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;reference&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transactions&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference&gt;sys_user&lt;/reference&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition table="sys_user" /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-12-25 09:23:27&lt;/sys_created_on&gt;
+&lt;sys_id&gt;fd4c39d13bc2be5062f31831a3e45abb&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Approved by&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transactions_approved_by&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-12-25 09:29:09&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>fd4c39d13bc2be5062f31831a3e45abb</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_2468fd833b91fa900ad1a021a3e45a1d</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Business Unit&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;business_unit&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transaction_event&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 12:47:22&lt;/sys_created_on&gt;
+&lt;sys_id&gt;2468fd833b91fa900ad1a021a3e45a1d&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Business Unit&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transaction_event_business_unit&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2026-03-02 13:16:42&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>2468fd833b91fa900ad1a021a3e45a1d</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_3068fd833b91fa900ad1a021a3e45a6c</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Amount USD&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;amount_usd&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;decimal&lt;/internal_type&gt;
+&lt;mandatory&gt;true&lt;/mandatory&gt;
+&lt;max_length&gt;15&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transaction_event&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 12:47:22&lt;/sys_created_on&gt;
+&lt;sys_id&gt;3068fd833b91fa900ad1a021a3e45a6c&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Amount USD&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transaction_event_amount_usd&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-11-23 12:47:28&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>3068fd833b91fa900ad1a021a3e45a6c</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_3468fd833b91fa900ad1a021a3e45a73</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Cost Center&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;cost_center&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;true&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transaction_event&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 12:47:23&lt;/sys_created_on&gt;
+&lt;sys_id&gt;3468fd833b91fa900ad1a021a3e45a73&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Cost Center&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transaction_event_cost_center&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-11-23 12:47:27&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>3468fd833b91fa900ad1a021a3e45a73</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_3c68fd833b91fa900ad1a021a3e45aba</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Source System&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;source_system&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transaction_event&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 12:47:23&lt;/sys_created_on&gt;
+&lt;sys_id&gt;3c68fd833b91fa900ad1a021a3e45aba&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Source System&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transaction_event_source_system&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2026-03-02 13:16:42&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>3c68fd833b91fa900ad1a021a3e45aba</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_511e88243bd6765062f31831a3e45a41</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true,encode_utf8=false&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation&gt;(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);&lt;/calculation&gt;
+&lt;choice /&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Owner&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;owner&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;reference&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;32&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transaction_event&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference&gt;sys_user&lt;/reference&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition table="sys_user" /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2026-01-04 03:41:32&lt;/sys_created_on&gt;
+&lt;sys_id&gt;511e88243bd6765062f31831a3e45a41&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Owner&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transaction_event_owner&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2026-01-04 03:41:32&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>511e88243bd6765062f31831a3e45a41</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_6468fd833b91fa900ad1a021a3e45a2d</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Sent From&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;sent_from&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transaction_event&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 12:47:22&lt;/sys_created_on&gt;
+&lt;sys_id&gt;6468fd833b91fa900ad1a021a3e45a2d&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Sent From&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transaction_event_sent_from&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2026-03-02 13:16:42&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>6468fd833b91fa900ad1a021a3e45a2d</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_7068fd833b91fa900ad1a021a3e45aa7</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Billing Period&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;billing_period&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transaction_event&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 12:47:23&lt;/sys_created_on&gt;
+&lt;sys_id&gt;7068fd833b91fa900ad1a021a3e45aa7&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Billing Period&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transaction_event_billing_period&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2026-03-02 13:17:08&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>7068fd833b91fa900ad1a021a3e45aa7</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_7468fd833b91fa900ad1a021a3e45a58</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Correlation ID&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;correlation_id&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transaction_event&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 12:47:22&lt;/sys_created_on&gt;
+&lt;sys_id&gt;7468fd833b91fa900ad1a021a3e45a58&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Correlation ID&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transaction_event_correlation_id&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2026-03-02 13:16:43&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>7468fd833b91fa900ad1a021a3e45a58</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_7868fd833b91fa900ad1a021a3e45a34</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Service Category&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;service_category&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transaction_event&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 12:47:22&lt;/sys_created_on&gt;
+&lt;sys_id&gt;7868fd833b91fa900ad1a021a3e45a34&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Service Category&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transaction_event_service_category&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2026-03-02 13:16:43&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>7868fd833b91fa900ad1a021a3e45a34</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_7c68fd833b91fa900ad1a021a3e45a9f</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Vendor&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;vendor&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;true&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transaction_event&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 12:47:23&lt;/sys_created_on&gt;
+&lt;sys_id&gt;7c68fd833b91fa900ad1a021a3e45a9f&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Vendor&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transaction_event_vendor&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-11-23 12:47:28&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>7c68fd833b91fa900ad1a021a3e45a9f</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_b068fd833b91fa900ad1a021a3e45ab7</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Invoice ID&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;invoice_id&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transaction_event&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 12:47:23&lt;/sys_created_on&gt;
+&lt;sys_id&gt;b068fd833b91fa900ad1a021a3e45ab7&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Invoice ID&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transaction_event_invoice_id&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2026-03-02 13:16:43&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>b068fd833b91fa900ad1a021a3e45ab7</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_b868fd833b91fa900ad1a021a3e45a6f</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Schema Version&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;schema_version&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transaction_event&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 12:47:22&lt;/sys_created_on&gt;
+&lt;sys_id&gt;b868fd833b91fa900ad1a021a3e45a6f&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Schema Version&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transaction_event_schema_version&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2026-03-02 13:16:43&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>b868fd833b91fa900ad1a021a3e45a6f</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_bc68fd833b91fa900ad1a021a3e45a76</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;GL Account&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;gl_account&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transaction_event&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 12:47:23&lt;/sys_created_on&gt;
+&lt;sys_id&gt;bc68fd833b91fa900ad1a021a3e45a76&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;GL Account&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transaction_event_gl_account&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2026-03-02 13:16:43&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>bc68fd833b91fa900ad1a021a3e45a76</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_d068bd833b91fa900ad1a021a3e45ab8</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes /&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label /&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element /&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;collection&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transaction_event&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass&gt;1&lt;/sizeclass&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 12:47:21&lt;/sys_created_on&gt;
+&lt;sys_id&gt;d068bd833b91fa900ad1a021a3e45ab8&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;x_snc_forecast_v_0_expense_transaction_event&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transaction_event_NULL&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-11-23 12:47:21&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>d068bd833b91fa900ad1a021a3e45ab8</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_f068fd833b91fa900ad1a021a3e45a38</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Region&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;region&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transaction_event&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 12:47:22&lt;/sys_created_on&gt;
+&lt;sys_id&gt;f068fd833b91fa900ad1a021a3e45a38&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Region&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transaction_event_region&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2026-03-02 13:16:42&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>f068fd833b91fa900ad1a021a3e45a38</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_f468fd833b91fa900ad1a021a3e45aa3</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Timestamp&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;timestamp&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;glide_date_time&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transaction_event&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 12:47:23&lt;/sys_created_on&gt;
+&lt;sys_id&gt;f468fd833b91fa900ad1a021a3e45aa3&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Timestamp&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transaction_event_timestamp&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2026-03-02 13:16:43&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>f468fd833b91fa900ad1a021a3e45aa3</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_f868fd833b91fa900ad1a021a3e45a54</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Event ID&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;event_id&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;true&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transaction_event&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 12:47:22&lt;/sys_created_on&gt;
+&lt;sys_id&gt;f868fd833b91fa900ad1a021a3e45a54&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Event ID&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transaction_event_event_id&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-11-23 12:47:26&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>f868fd833b91fa900ad1a021a3e45a54</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_fc68fd833b91fa900ad1a021a3e45a30</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Priority&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;priority&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transaction_event&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 12:47:22&lt;/sys_created_on&gt;
+&lt;sys_id&gt;fc68fd833b91fa900ad1a021a3e45a30&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Priority&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transaction_event_priority&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2026-03-02 13:16:43&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>fc68fd833b91fa900ad1a021a3e45a30</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_fc68fd833b91fa900ad1a021a3e45a5b</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Event Type&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;event_type&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_expense_transaction_event&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 12:47:22&lt;/sys_created_on&gt;
+&lt;sys_id&gt;fc68fd833b91fa900ad1a021a3e45a5b&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Event Type&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_expense_transaction_event_event_type&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2026-03-02 13:16:43&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>fc68fd833b91fa900ad1a021a3e45a5b</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_495b7dcf3b91fa900ad1a021a3e45a5d</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true,encode_utf8=false&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Expense Transaction Event&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;expense_transaction_event&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;reference&lt;/internal_type&gt;
+&lt;mandatory&gt;true&lt;/mandatory&gt;
+&lt;max_length&gt;32&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_variance_task&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference&gt;x_snc_forecast_v_0.expense_transaction_event&lt;/reference&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition table="x_snc_forecast_v_0.expense_transaction_event" /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 13:00:14&lt;/sys_created_on&gt;
+&lt;sys_id&gt;495b7dcf3b91fa900ad1a021a3e45a5d&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Expense Transaction Event&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_variance_task_expense_transaction_event&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-11-23 13:00:19&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>495b7dcf3b91fa900ad1a021a3e45a5d</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_615bfdcf3b91fa900ad1a021a3e45a1c</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Created Date&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;created_date&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;glide_date_time&lt;/internal_type&gt;
+&lt;mandatory&gt;true&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_variance_task&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 13:00:16&lt;/sys_created_on&gt;
+&lt;sys_id&gt;615bfdcf3b91fa900ad1a021a3e45a1c&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Created Date&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_variance_task_created_date&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-11-23 13:00:24&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>615bfdcf3b91fa900ad1a021a3e45a1c</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_715bfdcf3b91fa900ad1a021a3e45a7d</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Resolution Comments&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;resolution_comments&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_variance_task&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 13:00:16&lt;/sys_created_on&gt;
+&lt;sys_id&gt;715bfdcf3b91fa900ad1a021a3e45a7d&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Resolution Comments&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_variance_task_resolution_comments&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-11-23 13:00:16&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>715bfdcf3b91fa900ad1a021a3e45a7d</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_955bbdcf3b91fa900ad1a021a3e45a1e</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Threshold Value&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;threshold_value&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;decimal&lt;/internal_type&gt;
+&lt;mandatory&gt;true&lt;/mandatory&gt;
+&lt;max_length&gt;15&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_variance_task&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 13:00:15&lt;/sys_created_on&gt;
+&lt;sys_id&gt;955bbdcf3b91fa900ad1a021a3e45a1e&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Threshold Value&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_variance_task_threshold_value&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-11-23 13:00:20&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>955bbdcf3b91fa900ad1a021a3e45a1e</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_dd5bbdcf3b91fa900ad1a021a3e45a72</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;1&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Status&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;status&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;choice&lt;/internal_type&gt;
+&lt;mandatory&gt;true&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_variance_task&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 13:00:15&lt;/sys_created_on&gt;
+&lt;sys_id&gt;dd5bbdcf3b91fa900ad1a021a3e45a72&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Status&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_variance_task_status&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-11-23 13:00:23&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>dd5bbdcf3b91fa900ad1a021a3e45a72</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_ed5bbdcf3b91fa900ad1a021a3e45ad3</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label&gt;Assignee&lt;/column_label&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element&gt;assignee&lt;/element&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;string&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_variance_task&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass /&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 13:00:15&lt;/sys_created_on&gt;
+&lt;sys_id&gt;ed5bbdcf3b91fa900ad1a021a3e45ad3&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;Assignee&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_variance_task_assignee&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-11-23 13:00:15&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>ed5bbdcf3b91fa900ad1a021a3e45ad3</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+  <sys_update_xml>
+    <action>INSERT_OR_UPDATE</action>
+    <application>a4fd2da13bf8be5062f31831a3e45ac9</application>
+    <category>customer</category>
+    <name>sys_dictionary_f45b3dcf3b91fa900ad1a021a3e45a47</name>
+    <payload>&lt;sys_dictionary&gt;
+&lt;active&gt;true&lt;/active&gt;
+&lt;array&gt;false&lt;/array&gt;
+&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+&lt;attributes /&gt;
+&lt;audit&gt;false&lt;/audit&gt;
+&lt;calculation /&gt;
+&lt;choice&gt;0&lt;/choice&gt;
+&lt;choice_field /&gt;
+&lt;choice_table /&gt;
+&lt;column_label /&gt;
+&lt;comments /&gt;
+&lt;create_roles /&gt;
+&lt;default_value /&gt;
+&lt;defaultsort /&gt;
+&lt;delete_roles /&gt;
+&lt;dependent /&gt;
+&lt;dependent_on_field /&gt;
+&lt;display&gt;false&lt;/display&gt;
+&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+&lt;dynamic_creation_script /&gt;
+&lt;dynamic_default_value /&gt;
+&lt;dynamic_ref_qual /&gt;
+&lt;element /&gt;
+&lt;element_reference&gt;false&lt;/element_reference&gt;
+&lt;foreign_database /&gt;
+&lt;formula /&gt;
+&lt;function_definition /&gt;
+&lt;function_field&gt;false&lt;/function_field&gt;
+&lt;internal_type&gt;collection&lt;/internal_type&gt;
+&lt;mandatory&gt;false&lt;/mandatory&gt;
+&lt;max_length&gt;40&lt;/max_length&gt;
+&lt;name&gt;x_snc_forecast_v_0_variance_task&lt;/name&gt;
+&lt;next_element /&gt;
+&lt;primary&gt;false&lt;/primary&gt;
+&lt;read_only&gt;false&lt;/read_only&gt;
+&lt;read_only_option /&gt;
+&lt;read_roles /&gt;
+&lt;reference /&gt;
+&lt;reference_cascade_rule /&gt;
+&lt;reference_floats&gt;false&lt;/reference_floats&gt;
+&lt;reference_key /&gt;
+&lt;reference_qual /&gt;
+&lt;reference_qual_condition /&gt;
+&lt;reference_type /&gt;
+&lt;sizeclass&gt;1&lt;/sizeclass&gt;
+&lt;spell_check&gt;false&lt;/spell_check&gt;
+&lt;staged&gt;false&lt;/staged&gt;
+&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+&lt;sys_created_on&gt;2025-11-23 13:00:12&lt;/sys_created_on&gt;
+&lt;sys_id&gt;f45b3dcf3b91fa900ad1a021a3e45a47&lt;/sys_id&gt;
+&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+&lt;sys_name&gt;x_snc_forecast_v_0_variance_task&lt;/sys_name&gt;
+&lt;sys_package&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_package&gt;
+&lt;sys_policy /&gt;
+&lt;sys_scope&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+&lt;sys_update_name&gt;sys_dictionary_x_snc_forecast_v_0_variance_task_NULL&lt;/sys_update_name&gt;
+&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+&lt;sys_updated_on&gt;2025-11-23 13:00:12&lt;/sys_updated_on&gt;
+&lt;table_reference&gt;false&lt;/table_reference&gt;
+&lt;text_index&gt;false&lt;/text_index&gt;
+&lt;unique&gt;false&lt;/unique&gt;
+&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+&lt;virtual&gt;false&lt;/virtual&gt;
+&lt;virtual_type&gt;script&lt;/virtual_type&gt;
+&lt;widget /&gt;
+&lt;write_roles /&gt;
+&lt;xml_view&gt;false&lt;/xml_view&gt;
+&lt;/sys_dictionary&gt;
+</payload>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2026-07-02 00:21:30</sys_created_on>
+    <sys_id>f45b3dcf3b91fa900ad1a021a3e45a47</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2026-07-02 00:21:30</sys_updated_on>
+    <type>sys_dictionary</type>
+    <update_set>0a3411023b754fd0e0abdda693e45a0a</update_set>
+  </sys_update_xml>
+</unload>

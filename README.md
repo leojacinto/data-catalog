@@ -68,15 +68,45 @@ Requires Python 3.9+.
 | 2 | `neon_setup.py` | Creates lineage views on top of base tables: `vw_budget_variance_detail`, `vw_budget_anomalies` |
 | 3 | `snowflake_setup.py` | Creates `APRA_RISK_DW.RISK` schema: tables, views, seed data |
 | 4 | `snowflake_catalog.py` | Adds Snowflake Horizon tags, column-level sensitivity, DMFs, object comments |
-| 5 | UI - ZCC setup | Configure Neon zero-copy connection and map data fabric tables in Connect Hub (see below) |
-| 6 | `sn_govern.py` | Creates SN domains, glossary terms, enriches Neon asset descriptions |
-| 7 | `sn_snowflake_catalog_ingest.py` | Injects Snowflake assets into SN Data Catalog (use if the KOS Snowflake collector can't connect) |
+| 5 | UI - Install update set | Upload `update-sets/forecast_variance_table_definitions.xml` to create the Forecast Variance scoped app tables (see below) |
+| 6 | UI - ZCC setup | Configure Neon zero-copy connection and map data fabric tables in Connect Hub (see below) |
+| 7 | `sn_govern.py` | Creates SN domains, glossary terms, enriches Neon asset descriptions |
+| 8 | `sn_snowflake_catalog_ingest.py` | Injects Snowflake assets into SN Data Catalog (use if the KOS Snowflake collector can't connect) |
+
+---
+
+## Forecast Variance Scoped App Setup
+
+The `x_snc_forecast_v_0_*` tables are custom local tables defined inside the **Forecast Variance** demo scoped app (`x_snc_forecast_v_0`). This app does **not** ship with ServiceNow - you must install it on your instance before running `sn_govern.py` or any ZCC mapping steps.
+
+### Step 0 - Install the scoped app via update set
+
+1. In your instance navigate to **All -> System Update Sets -> Retrieved Update Sets**
+2. Click **Import Update Set from XML**
+3. Upload `update-sets/forecast_variance_table_definitions.xml` from this repo
+4. Open the imported update set and click **Preview Update Set**, resolve any skipped records
+5. Click **Commit Update Set**
+
+This creates all six tables in the `x_snc_forecast_v_0` scope. No application code, UI policies, or business rules are included - only table and column definitions.
+
+### Forecast Variance tables
+
+| Table | Description | Data source |
+|-------|-------------|-------------|
+| `x_snc_forecast_v_0_df_mv_detail` | Budget vs actual variance detail with ML anomaly flags | Local (seed via `neon_base_setup.py` output) or ZCC-mapped to Neon `monthly_variance_detail` |
+| `x_snc_forecast_v_0_df_sv` | Aggregated variance by cost centre and period | Local or ZCC-mapped to Neon `summary_variance` |
+| `x_snc_forecast_v_0_variance_task` | Remediation tasks | ServiceNow-native (no external source) |
+| `x_snc_forecast_v_0_expense_transaction_event` | Expense events | ServiceNow-native (no external source) |
+| `x_snc_forecast_v_0_cost_center_budget_history` | Cost centre budget history | Local |
+| `x_snc_forecast_v_0_df_cc_summary` | Cost centre budget summary | Local |
 
 ---
 
 ## Zero Copy Connector (ZCC) Setup
 
-The ZCC tables (`x_snc_forecast_v_0_*`) are predefined data fabric tables that ship with the **Forecast Variance** scoped app (`x_snc_forecast_v_0`). They must be connected to your Neon source through Connect Hub.
+> **Prerequisite:** Complete the scoped app install above first.
+
+ZCC allows `df_mv_detail` and `df_sv` to serve data live from Neon without copying it into ServiceNow. This requires a **WDF Advanced** entitlement. If you do not have ZCC entitlement, the tables work as plain local tables - populate them manually or skip this section.
 
 ### Required role
 
@@ -100,7 +130,7 @@ The ZCC tables (`x_snc_forecast_v_0_*`) are predefined data fabric tables that s
 
 ### Step 2 - Map the data fabric tables
 
-For each of the four tables below, repeat the following:
+For each of the two tables below, repeat the following:
 
 1. Navigate to the scoped app table list: **All -> Forecast Variance** (or search `x_snc_forecast_v_0` in the navigator)
 2. Open the table record and click **Configure Data Source**
@@ -108,14 +138,10 @@ For each of the four tables below, repeat the following:
 4. Select the corresponding source table from Neon (column names map 1:1)
 5. Save
 
-| ServiceNow table | Neon source table | Description |
-|-----------------|------------------|-------------|
-| `x_snc_forecast_v_0_df_mv_detail` | `monthly_variance_detail` | Budget vs actual variance detail with ML anomaly flags |
-| `x_snc_forecast_v_0_df_sv` | `summary_variance` | Aggregated variance by cost centre and period |
-| `x_snc_forecast_v_0_variance_task` | (ServiceNow native) | Remediation tasks - no ZCC mapping needed |
-| `x_snc_forecast_v_0_expense_transaction_event` | (ServiceNow native) | Expense events - no ZCC mapping needed |
-
-> **Note:** `variance_task` and `expense_transaction_event` are ServiceNow-native tables. Only `df_mv_detail` and `df_sv` require external ZCC mapping to Neon.
+| ServiceNow table | Neon source table |
+|-----------------|------------------|
+| `x_snc_forecast_v_0_df_mv_detail` | `monthly_variance_detail` |
+| `x_snc_forecast_v_0_df_sv` | `summary_variance` |
 
 ### Step 3 - Verify
 
