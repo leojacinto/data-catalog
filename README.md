@@ -169,6 +169,8 @@ The `mid-server/` directory is gitignored. To set up:
 
 If you encounter connectivity errors when running the KOS Snowflake collector, run `sn_snowflake_catalog_ingest.py` instead - it pulls metadata directly from Snowflake `INFORMATION_SCHEMA` (object comments, table tags, column-level tags, DMFs) and injects it into the ServiceNow catalog.
 
+> **Note:** A separate alternative is to create ZCC virtual tables (data fabric tables) mapped to Snowflake source tables first. Once those virtual tables exist in ServiceNow, their metadata becomes available to the Data Catalog as native ServiceNow assets. This repo does not currently implement that path.
+
 ---
 
 ## Demo Script
@@ -186,3 +188,4 @@ See `HOW-TO-DEMO.md` for the full 15-minute demo walkthrough.
 ## Planned Extensions
 
 - **AWS Glue Data Catalog** - data lake layer (raw trade events -> Glue ETL -> Snowflake TRADE), creates cross-system lineage completing the full ingestion chain
+- **ZCC virtual table metadata path** - create ServiceNow data fabric tables via ZCC mapped to Snowflake source tables, then catalog those virtual tables as native assets. This is a possible alternative to direct `INFORMATION_SCHEMA` injection but has not been explored in this repo yet
