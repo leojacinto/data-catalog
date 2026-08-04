@@ -7,6 +7,28 @@ Demonstrates ServiceNow WDF as a **meta-catalog** across three data sources:
 
 **Regulatory story:** bank demonstrating APRA CPG 235 / BCBS 239 compliance: data lineage, classification, ownership, and quality checks across all sources, discoverable in one governed catalog.
 
+## Docs in this repo
+
+| File | Contents |
+|---|---|
+| `README.md` | prerequisites, setup, run order, scoped app, ZCC, collector trigger |
+| [MID-SERVER.md](MID-SERVER.md) | MID Server install (non-standard here), start/stop/verify, manual upgrade, KOS bundle notes |
+| [TROUBLESHOOTING-COLLECTORS.md](TROUBLESHOOTING-COLLECTORS.md) | collector failure modes and how to diagnose them |
+| `HOW-TO-DEMO.md` | 15-minute demo walkthrough |
+| `LOCAL-CATALOG.md` | cataloguing the instance's own CMDB |
+
+## Current state
+
+How each source actually reaches the catalog today. Assets created by a collector get an `iri` and are visible to the catalog graph, semantic search and the Data Product "Add assets" picker; Table API inserts do not.
+
+| Source | Route into the catalog | `iri` populated |
+|---|---|---|
+| Neon PostgreSQL | `catalog-postgres` metadata collector | yes (`sys_created_by=system`) |
+| Snowflake | `sn_snowflake_catalog_ingest.py` - Table API inserts | no (`sys_created_by=admin`) |
+| ServiceNow own tables (CMDB etc.) | `catalog-servicenow` collector | yes - 20,768 tables / 621,579 fields, first `COMPLETED` run 2026-08-04 |
+
+The `catalog-servicenow` collector has **no table selection** - it harvests every application scope, table, field and view on the instance. On this instance that is a 2 GB results graph and a ~6h49m run, which is why the instance limits below had to be raised. Collected assets land in the ServiceNow classes `sn_dcg_cc_sn_table` / `sn_dcg_cc_sn_field` / `sn_dcg_cc_sn_view`, **not** the `sn_dcg_cc_kos_database_*` classes the JDBC collectors use.
+
 ---
 
 ## Prerequisites
@@ -24,7 +46,7 @@ Demonstrates ServiceNow WDF as a **meta-catalog** across three data sources:
   - `data_product_user` - required for consumers querying published Data Products
 - A **MID Server** installed, running, and validated on the instance (see MID Server section below)
 - The Neon metadata collector connector (`catalog-postgresql`) available under Connect Hub
-- Optional: a working connection for the Snowflake KOS metadata collector. If the collector can't reach Snowflake (common on PDIs), use `sn_snowflake_catalog_ingest.py` instead.
+- Optional: a working connection for the Snowflake KOS metadata collector - see the Snowflake Collector Note below for the fallback
 
 > **Note:** Build and test in a development or sub-production instance first. Use an update set to promote to production.
 
@@ -56,7 +78,7 @@ Requires Python 3.9+.
 ## Setup
 
 1. Copy `.env.example` to `.env` and fill in all values
-2. Source the env file: `export $(grep -v '^#' .env | xargs)`
+2. Do **not** source `.env` with `export $(grep -v '^#' .env | xargs)` - the passwords contain `$`, which the shell expands, silently producing a wrong password and a confusing `401 User is not authenticated`. Parse `.env` literally instead (see the Python example in [MID-SERVER.md](MID-SERVER.md)), or quote values individually.
 
 ---
 
@@ -152,16 +174,23 @@ For each of the two tables below, repeat the following:
 
 ## MID Server
 
-The `mid-server/` directory is gitignored. To set up:
-1. Download the MID Server zip from your SN instance (`mid_server_download_ui.do`)
-2. Extract to `mid-server/`
-3. Edit `mid-server/agent/config.xml` and set `url`, `mid.instance.username`, `mid.instance.password`
-4. Start: `bash mid-server/agent/start-macos.sh`
+MID Server setup, the non-standard local install, start/stop/verify, manual upgrade and KOS bundle notes: see **[MID-SERVER.md](MID-SERVER.md)**.
 
-**KOS bundle notes:**
-- All `kos-bundle-*.jar` files must be at matching versions (check `ecc_agent_jar` table)
-- `kos-bundle-d.jar` and `kos-bundle-e.jar`: `resources.txt` must be empty. The split Snowflake JDBC jar entries cause `ExceptionInInitializerError` with the PostgreSQL collector.
-- The PostgreSQL JDBC driver is bundled inside the KOS collectors; do not add a separate jar to `extlib/`
+---
+
+## Running a Metadata Collector without the UI
+
+Trigger a collection run over REST - no Connect Hub UI, no MCP server needed:
+
+```bash
+curl -s -X POST -u "admin:<password>" \
+  "https://$SN_HOST/api/sn_meta_collectors/metadata_collector/schedule_now?collectorId=<collector_sys_id>"
+# -> {"result":{"success":true,"sysId":"<execution_run_sys_id>"}}
+```
+
+Collector sys_ids live in `sys_wdf_metadata_collector`. Poll the returned run in `sn_dcg_core_execution_run` (fields `state`, `current_phase`, `percent_complete`, `error_message`) until `state` is `COMPLETED` or `ERROR`. Other operations on the same API: `GET /collector`, `GET /lastrun`, `GET /connection_record`, `POST /set_collector_mapping`.
+
+Collector failure modes and how to diagnose them: see **[TROUBLESHOOTING-COLLECTORS.md](TROUBLESHOOTING-COLLECTORS.md)**.
 
 ---
 
@@ -169,7 +198,7 @@ The `mid-server/` directory is gitignored. To set up:
 
 If you encounter connectivity errors when running the KOS Snowflake collector, run `sn_snowflake_catalog_ingest.py` instead - it pulls metadata directly from Snowflake `INFORMATION_SCHEMA` (object comments, table tags, column-level tags, DMFs) and injects it into the ServiceNow catalog.
 
-> **Note:** A separate alternative is to create ZCC virtual tables (data fabric tables) mapped to Snowflake source tables first. Once those virtual tables exist in ServiceNow, their metadata becomes available to the Data Catalog as native ServiceNow assets. This repo does not currently implement that path.
+> **Note:** A separate alternative is the ZCC virtual table metadata path - see Planned Extensions.
 
 ---
 

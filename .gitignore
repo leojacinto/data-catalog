@@ -9,6 +9,25 @@ mid_download.mjs
 *.png
 agent.jar
 
+# Local tool settings
+.claude/
+
+# Local working notes not yet reviewed for commit
+customer-feature-evaluation.md
+customer-feature-evaluation-local.md
+PLAN-data-catalog.md
+ServiceNow CMDB Cataloging and Validation.md
+
+# Superseded by the native catalog-servicenow metadata collector.
+# These do flat Table API inserts into sn_dcg_cc_kos_*, which leave iri blank and
+# are therefore invisible to the catalog graph, semantic search, and the Data
+# Product asset picker. sn_cmdb_catalog_enrich.py's hardcoded sys_ids are stale.
+sn_cmdb_catalog_ingest.py
+sn_cmdb_catalog_enrich.py
+
+# Dated doc backups taken before restructuring
+README.backup-*.md
+
 # OS
 .DS_Store
 

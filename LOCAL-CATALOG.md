@@ -1,0 +1,83 @@
+# Local Catalog: ServiceNow CMDB
+
+Cataloging data that already lives inside the ServiceNow instance itself (CMDB). This document is scoped to CMDB only.
+
+## Method
+
+Catalog CMDB with the **native ServiceNow metadata collector** in Connect Hub, pointed at the instance's own URL. This is the only supported path. A collector run registers each asset in the catalog knowledge graph - it populates `iri`/`class_iri`, which is what the Data Catalog detail views, semantic search, and the Data Product "Add assets" picker all read from. Direct Table API inserts into `sn_dcg_cc_kos_*` render in list/detail views but never get an `iri`, so they are invisible to every graph-backed surface. Do not use Table API inserts for this.
+
+## Prerequisites
+
+- **A working MID Server.** The collector runs its collection through a MID, even when the instance catalogs its own tables. Confirm the MID is Up/validated first - a broken MID leaves the collector stuck at status `NEW`.
+- **Roles on the running user** (all present on `admin` here): `df_data_steward` (create/manage data interfaces), `data_product_admin` (create/publish data products), `data_product_user` (read consumer access).
+- **No zero-copy connector needed.** That is only for external sources (Snowflake, Databricks, Oracle). CMDB is native.
+
+## Set up the collector (Connect Hub)
+
+**All > Connect Hub > Create metadata collector**, System = **ServiceNow**, Connection type = **New connection**:
+
+- Connection name, e.g. `ServiceNow Self`
+- ServiceNow Instance URL = this instance's URL
+- Authentication = username + password (basic auth)
+
+Saving creates the standard record chain:
+
+| Record | Table | Purpose |
+|---|---|---|
+| Connection & Credential Alias | `sys_alias` | ties the connection and credential together |
+| HTTP Connection | `http_connection` | instance host + `https` |
+| Credential | `basic_auth_credentials` | username + encrypted password |
+| Metadata Collector | `sys_wdf_metadata_collector` | links the `catalog-servicenow` connector to the alias |
+
+## Run and verify
+
+1. On the collector, run **Connect & verify**. On success the status moves `NEW -> CONNECTED` and a scheduled job is created. If it stays `NEW`, the MID is not healthy - fix that first.
+2. Run a collection. Watch `sn_dcg_core_execution_run`: a good run ends `COMPLETED`; failures record an `error_message` there.
+3. Confirm the assets - `cmdb_ci` / `cmdb_ci_server` appear under the CMDB database/schema, and each asset now has a populated `iri` (this is what distinguishes a real collector asset from a flat insert):
+
+```
+curl -u admin:<password> "https://<instance>.service-now.com/api/now/table/sn_dcg_cc_kos_database_table?sysparm_query=name=cmdb_ci_server&sysparm_fields=name,iri"
+```
+
+Add more CI classes (`cmdb_ci_appl`, `cmdb_ci_service`, ...) by including them in the collector's table selection.
+
+## Create a Data Interface, then a Data Product
+
+Order matters: the Data Product "Add assets" step only lists **published Data Interfaces**, so build the interface first.
+
+### Data Interface on `cmdb_ci`
+
+1. **All > Workflow Data Fabric > Data Workbench**
+2. **Create > Create data interface**
+3. Basic details: interface label (e.g. `Configuration Items`), confirm application scope, **Continue**
+4. Select source tables: **Add**, find `cmdb_ci` in the Data Catalog, add it, **Continue** (single table -> no join/union step)
+5. Select columns: pick only what consumers need, **Continue**
+6. Review the target column mapping, adjust labels/types, **Create table** (creates the Data Fabric table)
+7. **Connect and verify** the source connection -> expect **Verified**
+8. **Preview** the top rows to confirm the data
+9. Review permissions, **Continue**. For a native table the wizard does not auto-assign read roles - a security admin adds them to the composite role (an email template is generated for this).
+10. Review and finalize, **Done**
+
+### Data Product
+
+1. **Data Workbench > Create > Create data product**
+2. Basic details: name, description, optional tags, **Continue**
+3. **Add assets** -> select the `Configuration Items` interface, **Continue**
+4. Review inherited permissions (set access on the interface, not here), **Continue**
+5. Review, **Done** - created in **draft**
+6. **Publish** to make it visible to consumers in the Data Catalog
+
+## Optional enrichment on the collected assets
+
+Applied by PATCH to the collector-produced table assets (`sn_dcg_cc_kos_database_table/{sys_id}`):
+
+- **Owner / Steward** -> `admin`
+- **Lifecycle status** -> `Approved` (resolves to an `sn_dcg_core_lifecycle_status` record)
+- **Tags** -> create with `POST /api/sn_dcg_core/v1/catalog/tag` (new sys_id is at `result._meta.sysId`), then set the `tags` field
+- **Glossary terms** -> create in `sn_dcg_core_glossary_term`; link to assets via the UI's Related Assets editor (no relationship predicate for term links exists on this instance)
+
+## Open items
+
+- **Data Interface on native tables:** the wizard's **Connect and verify** step expects a source connector, and there is no documented no-connector path for a native ServiceNow source. Re-test end to end once the collector has produced real (iri-bearing) `cmdb_ci` assets.
+- **Lineage:** the Graph Explorer Lineage tab is data-flow lineage, distinct from the structural `hasTable`/`hasColumn` graph. CMDB's `cmdb_rel_ci` CI-to-CI links are dependency/hosting, not data-flow - no mapping predicate is defined.
+- **Quality tab:** external tools submit results via the Data Quality API; there is no published request schema and the backing tables (`sn_dcg_core_dq_*`) are ACL-locked from the Table API. Whether CMDB Health feeds the Quality tab is unconfirmed.
