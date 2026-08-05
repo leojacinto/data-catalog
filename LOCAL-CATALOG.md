@@ -75,3 +75,33 @@ Applied by PATCH to the collector-produced table assets (`sn_dcg_cc_kos_database
 - **Lifecycle status** -> `Approved` (resolves to an `sn_dcg_core_lifecycle_status` record)
 - **Tags** -> create with `POST /api/sn_dcg_core/v1/catalog/tag` (new sys_id is at `result._meta.sysId`), then set the `tags` field
 - **Glossary terms** -> create in `sn_dcg_core_glossary_term`; link to assets via the UI's Related Assets editor (no relationship predicate for term links exists on this instance)
+
+## Next steps: Data Quality API ingestion with Soda Core
+
+Goal: quality checks on CMDB assets, scored and badged in the catalog, via the Data Quality API - proven with **Soda Core** (free, open-source) as the check engine.
+
+Reference: `data_quality/DataQuality_API_Reference_revised2 2.pdf`.
+
+**Endpoints:**
+
+| Endpoint | Purpose |
+|---|---|
+| `POST /data-quality/checks` | push check runs - `result` (PASS/FAIL/WARNING/PENDING), `score`, `runSuccessful`, `config` (id, source, title, query, dimension, priorityLevel, weight, resource) |
+| `POST /data-quality/badges` | attach `Good` / `Moderate` / `Poor` to a resource |
+| `POST /data-quality/checks/delete` | remove checks by `source` + `checkId` |
+| `GET /data-quality/logs?requestId=` | audit trail for the above |
+
+`config.source` is a free-text provider name - the doc's own example values are `soda` and `anomalo`. `config.resource` supports `TABLE` (`databaseLocation`, `database`, `schema`, `table`) or `IRI` - use `IRI` to target CMDB assets directly by the catalog `iri` we already have from the collector run, rather than reconstructing a database/schema/table triple that doesn't apply to CMDB.
+
+**Not yet done - open questions before implementing:**
+- Exact base path: doc says `<scope>` "varies per instance/deployment" - not yet resolved for this instance
+- Whether `IRI` resource type is accepted end-to-end (untested) or only `TABLE`/`COLUMN` are wired up on the backend
+- Required role(s) for POSTing to this API - not yet checked
+- Soda Core check target: CMDB tables (`cmdb_ci`, `cmdb_ci_server`) via the instance's own Table API, run locally, results POSTed back
+
+**Plan:**
+1. Confirm the API `<scope>` and required role on this instance
+2. Install Soda Core, write a minimal check against `cmdb_ci_server` (e.g. row count > 0, `sys_updated_on` freshness)
+3. Run the check, POST the result as a `checkRuns[]` entry with `resource.type=IRI` pointing at the `cmdb_ci_server` asset's `iri`
+4. Confirm the score/result appears on the asset in Data Catalog UI, and POST a `badges[]` entry to set Good/Moderate/Poor
+5. Pull `/data-quality/logs?requestId=` to confirm the write was accepted server-side
