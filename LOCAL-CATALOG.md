@@ -31,15 +31,15 @@ Saving creates the standard record chain:
 
 ## Run and verify
 
-1. On the collector, run **Connect & verify**. On success the status moves `NEW -> CONNECTED` and a scheduled job is created. If it stays `NEW`, the MID is not healthy - fix that first.
+1. On the collector, run **Connect & verify**. If it stays `NEW`, the MID is not healthy - fix that first. **Unverified beyond that:** we never exercised this button - every run in this repo was triggered directly over REST (`schedule_now`), bypassing it entirely. What it does to `collector_status` and whether it creates a scheduled job is not something we've tested. Do not assume a scheduled job appears on success - checked 2026-08-05 across all 4 collectors on this instance, only one (`Neon`, the one run manually through the UI early on) has `scheduled_job` populated; our REST-triggered ServiceNow collector is `CONNECTED` with no scheduled job at all despite a `COMPLETED` run.
 2. Run a collection. Watch `sn_dcg_core_execution_run`: a good run ends `COMPLETED`; failures record an `error_message` there.
-3. Confirm the assets - `cmdb_ci` / `cmdb_ci_server` appear under the CMDB database/schema, and each asset now has a populated `iri` (this is what distinguishes a real collector asset from a flat insert):
+3. Confirm the assets - CMDB tables land in `sn_dcg_cc_sn_table` (technical name in `table_name`, not `name`), each with a populated `iri` (this is what distinguishes a real collector asset from a flat insert):
 
 ```
-curl -u admin:<password> "https://<instance>.service-now.com/api/now/table/sn_dcg_cc_kos_database_table?sysparm_query=name=cmdb_ci_server&sysparm_fields=name,iri"
+curl -u admin:<password> "https://<instance>.service-now.com/api/now/table/sn_dcg_cc_sn_table?sysparm_query=table_name=cmdb_ci_server&sysparm_fields=table_name,name,iri"
 ```
 
-Add more CI classes (`cmdb_ci_appl`, `cmdb_ci_service`, ...) by including them in the collector's table selection.
+There is no table selection to configure. Verified 2026-08-05: the `catalog-servicenow` connector's wizard has exactly 4 fields - instance URL, username, password, and a hidden `use_mid` - no schema/table/scope filter of any kind. Unlike `catalog-oracle` or `catalog-databricks`, which do expose "schemas to collect," this connector harvests every application scope, table, field and view on the instance unconditionally (confirmed: 20,768 tables / 621,579 fields on one run). `cmdb_ci_appl`, `cmdb_ci_service`, etc. arrive automatically - there is nothing to add them to.
 
 ## Create a Data Interface, then a Data Product
 
@@ -75,9 +75,3 @@ Applied by PATCH to the collector-produced table assets (`sn_dcg_cc_kos_database
 - **Lifecycle status** -> `Approved` (resolves to an `sn_dcg_core_lifecycle_status` record)
 - **Tags** -> create with `POST /api/sn_dcg_core/v1/catalog/tag` (new sys_id is at `result._meta.sysId`), then set the `tags` field
 - **Glossary terms** -> create in `sn_dcg_core_glossary_term`; link to assets via the UI's Related Assets editor (no relationship predicate for term links exists on this instance)
-
-## Open items
-
-- **Data Interface on native tables:** the wizard's **Connect and verify** step expects a source connector, and there is no documented no-connector path for a native ServiceNow source. Re-test end to end once the collector has produced real (iri-bearing) `cmdb_ci` assets.
-- **Lineage:** the Graph Explorer Lineage tab is data-flow lineage, distinct from the structural `hasTable`/`hasColumn` graph. CMDB's `cmdb_rel_ci` CI-to-CI links are dependency/hosting, not data-flow - no mapping predicate is defined.
-- **Quality tab:** external tools submit results via the Data Quality API; there is no published request schema and the backing tables (`sn_dcg_core_dq_*`) are ACL-locked from the Table API. Whether CMDB Health feeds the Quality tab is unconfirmed.
