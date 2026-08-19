@@ -76,53 +76,27 @@ Applied by PATCH to the collector-produced table assets (`sn_dcg_cc_kos_database
 - **Tags** -> create with `POST /api/sn_dcg_core/v1/catalog/tag` (new sys_id is at `result._meta.sysId`), then set the `tags` field
 - **Glossary terms** -> create in `sn_dcg_core_glossary_term`; link to assets via the UI's Related Assets editor (no relationship predicate for term links exists on this instance)
 
-## Data Quality API ingestion with Soda Core
-
-Ran 16 real checks against all 4,162 live `cmdb_ci_win_server` records and pushed the results into the Data Quality API. 12 passed, 4 failed on genuine data issues, 1 not evaluated (schema baseline - normal on a first run, no history to compare against yet).
-
-### Soda Core side
-
-Soda Core has no direct ServiceNow connector - it needs a SQL-connectable source. Bridged via DuckDB (embedded, zero-server):
-
-1. Pull the table via Table API, paginated (`sysparm_limit`/`sysparm_offset`, 500/page). Reference fields come back as `{link, value}` objects even without `sysparm_display_value` - flatten to the `value` (sys_id) before loading.
-2. Load into a local DuckDB file with pandas (cast numeric/date columns properly - REST returns everything as strings).
-   ```
-   pip install soda-core-duckdb duckdb pandas
-   ```
-3. `configuration.yml` - one `data_source` block, `type: duckdb`, pointing at the file.
-4. `checks.yml` - SodaCL checks. Mapped to the requested categories, dropped 2 that had no sensible analog for this table:
-   - dropped **record-count/population reconciliation** - no second real source to reconcile against
-   - dropped **quarantining data from OE/DE calculations** - no visibility into that downstream process for a server CI table
-   - the other 10 categories each got 1-2 real checks (mandatory/non-null, format/regex, length, approved choice values, reference sys_id format, duplicate detection, conditional-mandatory, freshness, and a `schema:` block for drift detection)
-5. Run via the Python API, not the CLI (`soda scan` wasn't on PATH):
-   ```python
-   from soda.scan import Scan
-   scan = Scan()
-   scan.set_data_source_name("cmdb")
-   scan.add_configuration_yaml_file(file_path="configuration.yml")
-   scan.add_sodacl_yaml_file(file_path="checks.yml")
-   scan.execute()
-   scan.get_scan_results()   # structured dict: per-check outcome, check_value, generated SQL
-   ```
-
-### ServiceNow API side
+## Data Quality API ingestion
 
 **Endpoints used** (base `sn_dcg_core`, all needed a `/v1/` segment not shown in `sys_ws_definition.base_uri` - same versioning quirk as the Lineage API):
 - `POST /api/sn_dcg_core/v1/catalog/data-quality/checks`
 - `POST /api/sn_dcg_core/v1/catalog/data-quality/badges`
+- `POST /api/sn_dcg_core/v1/catalog/data-quality/checks/delete`
 - `GET /api/sn_dcg_core/v1/catalog/data-quality/logs?requestId=`
 
-**Targeting:** `config.resource` / `resource` = `{"type": "IRI", "iri": "<table's own catalog iri>"}` - pulled once from `sn_dcg_cc_sn_table` for `cmdb_ci_win_server`, reused across all 16 `checkRuns[]` entries and the one `badges[]` entry (table-level assessment, not per-record).
+**Targeting:** `config.resource` / `resource` = `{"type": "IRI", "iri": "<table's own catalog iri>"}` - pulled once from `sn_dcg_cc_sn_table` for `cmdb_ci_win_server`, reused across every `checkRuns[]` entry and the `badges[]` entry (table-level assessment, not per-record).
 
-**Payload per check** - `config.source: "soda"`, `config.title`, `config.query` (the real generated SQL from Soda's scan results, so the check is traceable), `config.dimension` (COMPLETENESS/VALIDITY/UNIQUENESS/CONSISTENCY/TIMELINESS per category), `result: PASS|FAIL`, `runSuccessful: true`, `evaluatedMessage` (the real finding, e.g. "98 duplicate serial number groups found").
+**Payload per check** - `config.source`, `config.title`, `config.query` (the actual query used to compute it, so the check is traceable), `config.dimension` (COMPLETENESS/VALIDITY/UNIQUENESS/CONSISTENCY/TIMELINESS per category), `result: PASS|FAIL`, `runSuccessful: true`, `evaluatedMessage` (the real finding).
 
-**Badge:** one `Moderate` (12/16 pass rate - not `Good`, not `Poor`).
+**Deleting checks:** exact `{source, checkId}` pairs only via `checks/delete` - no query/wildcard delete exists on this API.
 
-**Response:** both calls returned `202 Accepted`, `success: 16`/`success: 1`, `failed: 0`.
+**Response:** all calls return `202 Accepted` with a `success`/`failed` count and a `requestId`.
+
+**Known verification gap:** the backing tables (`sn_dcg_core_dq_check_run`, `sn_dcg_core_dq_badge`, `sn_dcg_core_dq_check`, `sn_dcg_core_dq_audit`) return `403 User Not Authorized` via Table API even for admin. Can't independently verify a write landed beyond the `202`/success count - only the Data Catalog UI's **Data Quality** tab on the asset confirms it visually.
 
 ## Data Quality checks with zero data leaving ServiceNow
 
-The Soda Core approach above pulls every row into a local DuckDB file - real CMDB field values leave the instance. This section replaces those 16 checks with checks computed entirely server-side: only a single aggregate number crosses the wire per check, never row data.
+Checks computed entirely server-side: only a single aggregate number crosses the wire per check, never row data.
 
 ```mermaid
 ---
@@ -178,7 +152,7 @@ flowchart LR
 
 **Endpoint:** `GET /api/now/stats/{tableName}` (Aggregate API, wraps `GlideAggregate`) with `sysparm_count=true` and `sysparm_query=<encoded query>`.
 
-Pushed 8 checks against `cmdb_ci_win_server`, same targeting/payload shape as the Soda run (`config.source: "native_stats"`, `resource.type: "IRI"`, same table IRI):
+Pushed 8 checks against `cmdb_ci_win_server` (`config.source: "native_stats"`, `resource.type: "IRI"`, same table IRI):
 
 | Check | Query | Result |
 |---|---|---|
@@ -193,8 +167,8 @@ Pushed 8 checks against `cmdb_ci_win_server`, same targeting/payload shape as th
 
 Badge pushed: `Moderate` (5/8 pass).
 
-**Duplicate detection - also native, via the Aggregate API's `sysparm_group_by`/`sysparm_having`** (not just `sysparm_count`): `GET /api/now/stats/cmdb_ci_win_server?sysparm_count=true&sysparm_group_by=serial_number&sysparm_having=count^serial_number^>^1&sysparm_query=serial_numberISNOTEMPTY` returns one entry per duplicate value plus its count - confirmed 98 duplicate `serial_number` groups (matches the Soda finding exactly) and 0 duplicate `sys_id` groups. Computed and verified, not yet pushed to the API.
+**Duplicate detection - also native, via the Aggregate API's `sysparm_group_by`/`sysparm_having`** (not just `sysparm_count`): `GET /api/now/stats/cmdb_ci_win_server?sysparm_count=true&sysparm_group_by=serial_number&sysparm_having=count^serial_number^>^1&sysparm_query=serial_numberISNOTEMPTY` returns one entry per duplicate value plus its count - confirmed 98 duplicate `serial_number` groups and 0 duplicate `sys_id` groups. Computed and verified, not yet pushed to the API.
 
-**Confirmed impossible natively - not a Table-API-vs-Aggregate-API gap, a language gap:** checked ServiceNow's own operator reference (`r_OpAvailableFiltersQueries.md` in the ServiceNowDocs repo). The encoded query language has no `LENGTH()` function and no regex operator (only `LIKE`/`STARTSWITH`/`ENDSWITH` substring matching) on any REST surface, Table or Aggregate. So these 6 of the original 16 checks cannot be done as a pure server-side aggregate at all - they need real field values in hand:
-- `length_host_name`, `length_serial` (need `LENGTH()`)
-- `format_fqdn`, `ref_manufacturer`, `ref_model`, `ref_location` (need regex)
+**Confirmed impossible natively:** checked ServiceNow's own operator reference (`r_OpAvailableFiltersQueries.md` in the ServiceNowDocs repo). The encoded query language has no `LENGTH()` function and no regex operator (only `LIKE`/`STARTSWITH`/`ENDSWITH` substring matching) on any REST surface, Table or Aggregate. So these checks can't be done as a pure server-side aggregate at all - they need real field values in hand:
+- host name / serial number length limits (need `LENGTH()`)
+- FQDN format, and sys_id-format validation on reference fields (need regex)
