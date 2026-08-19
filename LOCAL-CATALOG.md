@@ -76,7 +76,7 @@ Applied by PATCH to the collector-produced table assets (`sn_dcg_cc_kos_database
 - **Tags** -> create with `POST /api/sn_dcg_core/v1/catalog/tag` (new sys_id is at `result._meta.sysId`), then set the `tags` field
 - **Glossary terms** -> create in `sn_dcg_core_glossary_term`; link to assets via the UI's Related Assets editor (no relationship predicate for term links exists on this instance)
 
-## Data Quality API ingestion with Soda Core (done 2026-08-19)
+## Data Quality API ingestion with Soda Core
 
 Ran 16 real checks against all 4,162 live `cmdb_ci_win_server` records and pushed the results into the Data Quality API. 12 passed, 4 failed on genuine data issues, 1 not evaluated (schema baseline - normal on a first run, no history to compare against yet).
 
