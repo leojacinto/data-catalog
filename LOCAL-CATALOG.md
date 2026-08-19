@@ -169,7 +169,6 @@ flowchart LR
     F L_F_H_0@== pass rate ==> H
     H L_H_I_0@==> I
     I L_I_J_0@==> J
-    n1["`**Rate ServiceNow Data externally using Data Quality APIs**`"]
 
     n1@{ shape: text}
     style n1 font-size:24px,fill:transparent,color:#AA00FF
