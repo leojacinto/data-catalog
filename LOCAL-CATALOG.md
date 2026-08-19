@@ -120,11 +120,7 @@ Soda Core has no direct ServiceNow connector - it needs a SQL-connectable source
 
 **Response:** both calls returned `202 Accepted`, `success: 16`/`success: 1`, `failed: 0`.
 
-**Known verification gap:** the backing tables (`sn_dcg_core_dq_check_run`, `sn_dcg_core_dq_badge`, `sn_dcg_core_dq_check`, `sn_dcg_core_dq_audit`) return `403 User Not Authorized` via Table API even for admin - confirms the earlier note that these are ACL-locked. Can't independently verify the write landed beyond the `202`/success count - only the Data Catalog UI's **Data Quality** tab on the asset can confirm it visually.
-
-**Deleting checks:** `POST /api/sn_dcg_core/v1/catalog/data-quality/checks/delete`, body `{"deleteChecks": [{"source": "<source>", "checkId": "<id>"}, ...]}` - exact `source`+`checkId` pairs only, no query/wildcard delete exists on this API. The 16 Soda checks above were removed this way before the native run below replaced them.
-
-## Data Quality checks with zero data leaving ServiceNow (done 2026-08-19)
+## Data Quality checks with zero data leaving ServiceNow
 
 The Soda Core approach above pulls every row into a local DuckDB file - real CMDB field values leave the instance. This section replaces those 16 checks with checks computed entirely server-side: only a single aggregate number crosses the wire per check, never row data.
 
