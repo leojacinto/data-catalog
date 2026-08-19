@@ -170,8 +170,6 @@ flowchart LR
     H L_H_I_0@==> I
     I L_I_J_0@==> J
 
-    n1@{ shape: text}
-    style n1 font-size:24px,fill:transparent,color:#AA00FF
 
     L_A_B_0@{ animation: fast } 
     L_B_F_0@{ animation: fast } 
