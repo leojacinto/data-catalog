@@ -76,14 +76,132 @@ Applied by PATCH to the collector-produced table assets (`sn_dcg_cc_kos_database
 - **Tags** -> create with `POST /api/sn_dcg_core/v1/catalog/tag` (new sys_id is at `result._meta.sysId`), then set the `tags` field
 - **Glossary terms** -> create in `sn_dcg_core_glossary_term`; link to assets via the UI's Related Assets editor (no relationship predicate for term links exists on this instance)
 
-## Next steps: Data Quality API ingestion with Soda Core
+## Data Quality API ingestion with Soda Core (done 2026-08-19)
 
-Score and badge CMDB assets in the catalog via the Data Quality API, using **Soda Core** (free, open-source) as the check engine.
+Ran 16 real checks against all 4,162 live `cmdb_ci_win_server` records and pushed the results into the Data Quality API. 12 passed, 4 failed on genuine data issues, 1 not evaluated (schema baseline - normal on a first run, no history to compare against yet).
 
-**Endpoints:** `POST /data-quality/checks` (push check runs - result, score, config), `POST /data-quality/badges` (Good/Moderate/Poor), `POST /data-quality/checks/delete`, `GET /data-quality/logs?requestId=`.
+### Soda Core side
 
-**Plan:**
-1. Install Soda Core, write a check against `cmdb_ci_server` (e.g. row count > 0, freshness on `sys_updated_on`)
-2. Run it, POST the result as a `checkRuns[]` entry targeting the asset by `resource.type=IRI` + its catalog `iri`
-3. POST a `badges[]` entry (Good/Moderate/Poor) and confirm both show on the asset in Data Catalog
-4. Pull `/data-quality/logs` to confirm the write landed
+Soda Core has no direct ServiceNow connector - it needs a SQL-connectable source. Bridged via DuckDB (embedded, zero-server):
+
+1. Pull the table via Table API, paginated (`sysparm_limit`/`sysparm_offset`, 500/page). Reference fields come back as `{link, value}` objects even without `sysparm_display_value` - flatten to the `value` (sys_id) before loading.
+2. Load into a local DuckDB file with pandas (cast numeric/date columns properly - REST returns everything as strings).
+   ```
+   pip install soda-core-duckdb duckdb pandas
+   ```
+3. `configuration.yml` - one `data_source` block, `type: duckdb`, pointing at the file.
+4. `checks.yml` - SodaCL checks. Mapped to the requested categories, dropped 2 that had no sensible analog for this table:
+   - dropped **record-count/population reconciliation** - no second real source to reconcile against
+   - dropped **quarantining data from OE/DE calculations** - no visibility into that downstream process for a server CI table
+   - the other 10 categories each got 1-2 real checks (mandatory/non-null, format/regex, length, approved choice values, reference sys_id format, duplicate detection, conditional-mandatory, freshness, and a `schema:` block for drift detection)
+5. Run via the Python API, not the CLI (`soda scan` wasn't on PATH):
+   ```python
+   from soda.scan import Scan
+   scan = Scan()
+   scan.set_data_source_name("cmdb")
+   scan.add_configuration_yaml_file(file_path="configuration.yml")
+   scan.add_sodacl_yaml_file(file_path="checks.yml")
+   scan.execute()
+   scan.get_scan_results()   # structured dict: per-check outcome, check_value, generated SQL
+   ```
+
+### ServiceNow API side
+
+**Endpoints used** (base `sn_dcg_core`, all needed a `/v1/` segment not shown in `sys_ws_definition.base_uri` - same versioning quirk as the Lineage API):
+- `POST /api/sn_dcg_core/v1/catalog/data-quality/checks`
+- `POST /api/sn_dcg_core/v1/catalog/data-quality/badges`
+- `GET /api/sn_dcg_core/v1/catalog/data-quality/logs?requestId=`
+
+**Targeting:** `config.resource` / `resource` = `{"type": "IRI", "iri": "<table's own catalog iri>"}` - pulled once from `sn_dcg_cc_sn_table` for `cmdb_ci_win_server`, reused across all 16 `checkRuns[]` entries and the one `badges[]` entry (table-level assessment, not per-record).
+
+**Payload per check** - `config.source: "soda"`, `config.title`, `config.query` (the real generated SQL from Soda's scan results, so the check is traceable), `config.dimension` (COMPLETENESS/VALIDITY/UNIQUENESS/CONSISTENCY/TIMELINESS per category), `result: PASS|FAIL`, `runSuccessful: true`, `evaluatedMessage` (the real finding, e.g. "98 duplicate serial number groups found").
+
+**Badge:** one `Moderate` (12/16 pass rate - not `Good`, not `Poor`).
+
+**Response:** both calls returned `202 Accepted`, `success: 16`/`success: 1`, `failed: 0`.
+
+**Known verification gap:** the backing tables (`sn_dcg_core_dq_check_run`, `sn_dcg_core_dq_badge`, `sn_dcg_core_dq_check`, `sn_dcg_core_dq_audit`) return `403 User Not Authorized` via Table API even for admin - confirms the earlier note that these are ACL-locked. Can't independently verify the write landed beyond the `202`/success count - only the Data Catalog UI's **Data Quality** tab on the asset can confirm it visually.
+
+**Deleting checks:** `POST /api/sn_dcg_core/v1/catalog/data-quality/checks/delete`, body `{"deleteChecks": [{"source": "<source>", "checkId": "<id>"}, ...]}` - exact `source`+`checkId` pairs only, no query/wildcard delete exists on this API. The 16 Soda checks above were removed this way before the native run below replaced them.
+
+## Data Quality checks with zero data leaving ServiceNow (done 2026-08-19)
+
+The Soda Core approach above pulls every row into a local DuckDB file - real CMDB field values leave the instance. This section replaces those 16 checks with checks computed entirely server-side: only a single aggregate number crosses the wire per check, never row data.
+
+```mermaid
+---
+config:
+  theme: base
+  themeVariables:
+    primaryColor: '#f3eaf5'
+    primaryTextColor: '#2a1e2e'
+    primaryBorderColor: '#4d1a52'
+    lineColor: '#7a3d80'
+    secondaryColor: '#e2d0e5'
+    tertiaryColor: '#FFFFF8'
+    clusterBkg: '#FFFFF8'
+    clusterBorder: '#dcdcdc'
+    edgeLabelBackground: '#f7f3f8'
+    fontFamily: '''Open Sans Variable'', sans-serif'
+  fontFamily: '''Open Sans Variable'', sans-serif'
+  layout: fixed
+---
+flowchart LR
+ subgraph SN1["ServiceNow"]
+        A[("cmdb_ci_win_server")]
+  end
+ subgraph EXT["Native Data Quality check runner"]
+        B["Aggregate<br>API"]
+        F["Aggregate<br>result"]
+  end
+ subgraph SN2["ServiceNow — Data Quality API"]
+        G["POST /data-quality/checks<br>checkRuns[] → resource.type=IRI"]
+        H["POST /data-quality/badges<br>Good / Moderate / Poor"]
+        I[("sn_dcg_core_dq_*")]
+  end
+ subgraph SN3["Data Catalog UI"]
+        J["Windows Server asset<br>Data Quality tab: score + badge"]
+  end
+    A L_A_B_0@== REST ==> B
+    B L_B_F_0@==> F
+    F L_F_G_0@== build payload ==> G
+    G L_G_I_0@==> I
+    F L_F_H_0@== pass rate ==> H
+    H L_H_I_0@==> I
+    I L_I_J_0@==> J
+    n1["`**Rate ServiceNow Data externally using Data Quality APIs**`"]
+
+    n1@{ shape: text}
+    style n1 font-size:24px,fill:transparent,color:#AA00FF
+
+    L_A_B_0@{ animation: fast } 
+    L_B_F_0@{ animation: fast } 
+    L_F_G_0@{ animation: fast } 
+    L_G_I_0@{ animation: fast } 
+    L_F_H_0@{ animation: fast } 
+    L_H_I_0@{ animation: fast } 
+    L_I_J_0@{ animation: fast }
+```
+
+**Endpoint:** `GET /api/now/stats/{tableName}` (Aggregate API, wraps `GlideAggregate`) with `sysparm_count=true` and `sysparm_query=<encoded query>`.
+
+Pushed 8 checks against `cmdb_ci_win_server`, same targeting/payload shape as the Soda run (`config.source: "native_stats"`, `resource.type: "IRI"`, same table IRI):
+
+| Check | Query | Result |
+|---|---|---|
+| mandatory_name | `nameISEMPTY` | FAIL - 10/4162 missing |
+| mandatory_opstatus | `operational_statusISEMPTY` | PASS - 10 missing (0.24%) |
+| mandatory_serial | `serial_numberISEMPTY` | PASS - 324 missing (7.79%) |
+| choice_opstatus | `operational_statusNOT INjavascript:[...]` | PASS - 0 invalid |
+| choice_classification | `classificationNOT INjavascript:[...]` | PASS - 0 invalid |
+| format_cpu_core | `cpu_core_countISNOTEMPTY^cpu_core_count<1^NQcpu_core_countISNOTEMPTY^cpu_core_count>256` | PASS - 0 out of range |
+| cond_location | `operational_status=1^locationISEMPTY` | FAIL - 2710 missing location |
+| freshness_updated | `sys_updated_on<javascript:gs.daysAgoStart(730)` | FAIL - 385 stale >730 days |
+
+Badge pushed: `Moderate` (5/8 pass).
+
+**Duplicate detection - also native, via the Aggregate API's `sysparm_group_by`/`sysparm_having`** (not just `sysparm_count`): `GET /api/now/stats/cmdb_ci_win_server?sysparm_count=true&sysparm_group_by=serial_number&sysparm_having=count^serial_number^>^1&sysparm_query=serial_numberISNOTEMPTY` returns one entry per duplicate value plus its count - confirmed 98 duplicate `serial_number` groups (matches the Soda finding exactly) and 0 duplicate `sys_id` groups. Computed and verified, not yet pushed to the API.
+
+**Confirmed impossible natively - not a Table-API-vs-Aggregate-API gap, a language gap:** checked ServiceNow's own operator reference (`r_OpAvailableFiltersQueries.md` in the ServiceNowDocs repo). The encoded query language has no `LENGTH()` function and no regex operator (only `LIKE`/`STARTSWITH`/`ENDSWITH` substring matching) on any REST surface, Table or Aggregate. So these 6 of the original 16 checks cannot be done as a pure server-side aggregate at all - they need real field values in hand:
+- `length_host_name`, `length_serial` (need `LENGTH()`)
+- `format_fqdn`, `ref_manufacturer`, `ref_model`, `ref_location` (need regex)
