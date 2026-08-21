@@ -31,7 +31,7 @@ Saving creates the standard record chain:
 
 ## Run and verify
 
-1. On the collector, run **Connect & verify**. If it stays `NEW`, the MID is not healthy - fix that first. **Unverified beyond that:** we never exercised this button - every run in this repo was triggered directly over REST (`schedule_now`), bypassing it entirely. What it does to `collector_status` and whether it creates a scheduled job is not something we've tested. Do not assume a scheduled job appears on success - checked 2026-08-05 across all 4 collectors on this instance, only one (`Neon`, the one run manually through the UI early on) has `scheduled_job` populated; our REST-triggered ServiceNow collector is `CONNECTED` with no scheduled job at all despite a `COMPLETED` run.
+1. On the collector, run **Connect & verify**. If it stays `NEW`, the MID is not healthy - fix that first. 
 2. Run a collection. Watch `sn_dcg_core_execution_run`: a good run ends `COMPLETED`; failures record an `error_message` there.
 3. Confirm the assets - CMDB tables land in `sn_dcg_cc_sn_table` (technical name in `table_name`, not `name`), each with a populated `iri` (this is what distinguishes a real collector asset from a flat insert):
 
@@ -39,18 +39,16 @@ Saving creates the standard record chain:
 curl -u admin:<password> "https://<instance>.service-now.com/api/now/table/sn_dcg_cc_sn_table?sysparm_query=table_name=cmdb_ci_server&sysparm_fields=table_name,name,iri"
 ```
 
-There is no table selection to configure. Verified 2026-08-05: the `catalog-servicenow` connector's wizard has exactly 4 fields - instance URL, username, password, and a hidden `use_mid` - no schema/table/scope filter of any kind. Unlike `catalog-oracle` or `catalog-databricks`, which do expose "schemas to collect," this connector harvests every application scope, table, field and view on the instance unconditionally (confirmed: 20,768 tables / 621,579 fields on one run). `cmdb_ci_appl`, `cmdb_ci_service`, etc. arrive automatically - there is nothing to add them to.
-
 ## Create a Data Interface, then a Data Product
 
 Order matters: the Data Product "Add assets" step only lists **published Data Interfaces**, so build the interface first.
 
-### Data Interface on `cmdb_ci`
+### Data Interface on `cmdb_ci_win_server`
 
 1. **All > Workflow Data Fabric > Data Workbench**
 2. **Create > Create data interface**
 3. Basic details: interface label (e.g. `Configuration Items`), confirm application scope, **Continue**
-4. Select source tables: **Add**, find `cmdb_ci` in the Data Catalog, add it, **Continue** (single table -> no join/union step)
+4. Select source tables: **Add**, find `cmdb_ci_win_server` in the Data Catalog, add it, **Continue** (single table -> no join/union step)
 5. Select columns: pick only what consumers need, **Continue**
 6. Review the target column mapping, adjust labels/types, **Create table** (creates the Data Fabric table)
 7. **Connect and verify** the source connection -> expect **Verified**
@@ -91,8 +89,6 @@ Applied by PATCH to the collector-produced table assets (`sn_dcg_cc_kos_database
 **Deleting checks:** exact `{source, checkId}` pairs only via `checks/delete` - no query/wildcard delete exists on this API.
 
 **Response:** all calls return `202 Accepted` with a `success`/`failed` count and a `requestId`.
-
-**Known verification gap:** the backing tables (`sn_dcg_core_dq_check_run`, `sn_dcg_core_dq_badge`, `sn_dcg_core_dq_check`, `sn_dcg_core_dq_audit`) return `403 User Not Authorized` via Table API even for admin. Can't independently verify a write landed beyond the `202`/success count - only the Data Catalog UI's **Data Quality** tab on the asset confirms it visually.
 
 ## Data Quality checks with zero data leaving ServiceNow
 
@@ -168,7 +164,3 @@ Pushed 8 checks against `cmdb_ci_win_server` (`config.source: "native_stats"`, `
 Badge pushed: `Moderate` (5/8 pass).
 
 **Duplicate detection - also native, via the Aggregate API's `sysparm_group_by`/`sysparm_having`** (not just `sysparm_count`): `GET /api/now/stats/cmdb_ci_win_server?sysparm_count=true&sysparm_group_by=serial_number&sysparm_having=count^serial_number^>^1&sysparm_query=serial_numberISNOTEMPTY` returns one entry per duplicate value plus its count - confirmed 98 duplicate `serial_number` groups and 0 duplicate `sys_id` groups. Computed and verified, not yet pushed to the API.
-
-**Confirmed impossible natively:** checked ServiceNow's own operator reference (`r_OpAvailableFiltersQueries.md` in the ServiceNowDocs repo). The encoded query language has no `LENGTH()` function and no regex operator (only `LIKE`/`STARTSWITH`/`ENDSWITH` substring matching) on any REST surface, Table or Aggregate. So these checks can't be done as a pure server-side aggregate at all - they need real field values in hand:
-- host name / serial number length limits (need `LENGTH()`)
-- FQDN format, and sys_id-format validation on reference fields (need regex)
